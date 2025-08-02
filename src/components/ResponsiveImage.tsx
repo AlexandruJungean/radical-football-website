@@ -10,6 +10,7 @@ interface ResponsiveImageProps {
   width?: number;
   height?: number;
   priority?: boolean;
+  style?: React.CSSProperties;
 }
 
 const ResponsiveImage = ({
@@ -22,6 +23,7 @@ const ResponsiveImage = ({
   width,
   height,
   priority = false,
+  style,
 }: ResponsiveImageProps) => {
   if (fill) {
     return (
@@ -31,7 +33,7 @@ const ResponsiveImage = ({
         className={className}
         sizes={sizes}
         srcSet={srcSet}
-        style={{ objectFit: 'cover' }}
+        style={{ objectFit: 'cover', ...style }}
       />
     );
   }
@@ -46,6 +48,7 @@ const ResponsiveImage = ({
       sizes={sizes}
       srcSet={srcSet}
       loading={priority ? 'eager' : 'lazy'}
+      style={style}
     />
   );
 };
