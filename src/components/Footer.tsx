@@ -71,9 +71,9 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           {/* Logo and Description */}
-          <div className="md:col-span-2 lg:col-span-2 text-center md:text-left">
+          <div className="flex-1 text-center lg:text-left">
             <Link href="/" className="inline-block mb-6">
               <Image
                 src="/logo/logo-small.svg"
@@ -83,25 +83,25 @@ const Footer = () => {
                 className="h-12 w-auto filter brightness-0 invert"
               />
             </Link>
-            <p className="text-gray-300 text-lg mb-8 max-w-lg leading-relaxed mx-auto md:mx-0">
+            <p className="text-gray-300 text-lg mb-8 max-w-lg leading-relaxed mx-auto lg:mx-0">
               Empowering young players through football. Building meaningful relationships, 
               education, and joy through the beautiful game.
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3 mb-8">
-              <div className="flex items-center gap-3 justify-center md:justify-start">
+              <div className="flex items-center gap-3 justify-center lg:justify-start">
                 <HiMail className="w-5 h-5 text-[var(--color-accent)]" />
                 <span className="text-gray-300">contact@radicalfootball.org</span>
               </div>
-              <div className="flex items-center gap-3 justify-center md:justify-start">
+              <div className="flex items-center gap-3 justify-center lg:justify-start">
                 <HiLocationMarker className="w-5 h-5 text-[var(--color-accent)]" />
                 <span className="text-gray-300">Oradea, Romania</span>
               </div>
             </div>
 
             {/* Social Links */}
-            <div className="flex gap-4 justify-center md:justify-start">
+            <div className="flex gap-4 justify-center lg:justify-start">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
@@ -118,26 +118,28 @@ const Footer = () => {
           </div>
 
           {/* Footer Links */}
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category} className="md:col-span-1 text-center md:text-left">
-              <h3 className="text-lg font-bold text-white mb-4 lg:mb-6">
-                {category}
-              </h3>
-              <ul className="space-y-2 lg:space-y-3">
-                {links.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group justify-center md:justify-start"
-                    >
-                      <span>{link.name}</span>
-                      <HiArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all duration-300" />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="flex flex-col sm:flex-row gap-8 lg:gap-12 justify-center lg:justify-start">
+            {Object.entries(footerLinks).map(([category, links]) => (
+              <div key={category} className="text-center lg:text-left">
+                <h3 className="text-lg font-bold text-white mb-4 lg:mb-6">
+                  {category}
+                </h3>
+                <ul className="space-y-2 lg:space-y-3">
+                  {links.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group justify-center lg:justify-start"
+                      >
+                        <span>{link.name}</span>
+                        <HiArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Newsletter Section */}

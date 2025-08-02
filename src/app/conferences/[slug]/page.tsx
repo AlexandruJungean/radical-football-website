@@ -527,11 +527,21 @@ export default function ConferenceDetailPage() {
               </p>
             </div>
 
-            <div className="flex flex-wrap justify-center items-center gap-8">
-              <Image src="/sponsors/cetatea-oradea.svg" alt="Cetatea Oradea" width={120} height={60} className="opacity-70 hover:opacity-100 transition-opacity" />
-              <Image src="/sponsors/visit-oradea.svg" alt="Visit Oradea" width={120} height={60} className="opacity-70 hover:opacity-100 transition-opacity" />
-              <Image src="/sponsors/the-rada-way.svg" alt="The Rada Way" width={120} height={60} className="opacity-70 hover:opacity-100 transition-opacity" />
-              <Image src="/sponsors/xps-network.svg" alt="XPS Network" width={120} height={60} className="opacity-70 hover:opacity-100 transition-opacity" />
+            <div className="flex flex-col gap-8 items-center">
+              <Image 
+                src="/images/sponsors1.png" 
+                alt="Conference Sponsors" 
+                width={800} 
+                height={200} 
+                className="max-w-full"
+              />
+              <Image 
+                src="/images/sponsors2.png" 
+                alt="Conference Sponsors" 
+                width={800} 
+                height={200} 
+                className="max-w-full"
+              />
             </div>
           </div>
         </div>

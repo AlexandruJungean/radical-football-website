@@ -173,7 +173,7 @@ const ValuesSection = () => (
 ## 🎨 **DESIGN SYSTEM**
 ### Colors
 - Primary: #36586F (Dark Blue)
-- Secondary: #C15155 (Red)
+- Secondary: #E15050 (Red)
 - Background: #ffffff (White)
 - Text: #171717 (Dark Gray)
 

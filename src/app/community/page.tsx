@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { HiHeart, HiUserGroup, HiStar, HiChat, HiGlobe, HiSparkles } from 'react-icons/hi';
+import Header from '@/components/Header';
 import { HiMapPin } from 'react-icons/hi2';
 
 export default function CommunityPage() {
@@ -99,21 +100,10 @@ export default function CommunityPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-dark)] py-24">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full -translate-y-1/2 translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-[var(--color-accent)] rounded-full translate-y-1/2 -translate-x-1/2" />
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Our Community
-          </h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            A growing movement of coaches, parents, and educators united by a shared vision for youth football
-          </p>
-        </div>
-      </section>
+      <Header 
+        title="Our Community"
+        description="A growing movement of coaches, parents, and educators united by a shared vision for youth football"
+      />
 
       {/* Committee Board Section */}
       <section 

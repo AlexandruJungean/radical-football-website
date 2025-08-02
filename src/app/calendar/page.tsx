@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { HiCalendar, HiClock, HiLocationMarker, HiUserGroup, HiAcademicCap, HiMail, HiBell, HiArrowRight, HiChevronLeft, HiChevronRight } from 'react-icons/hi';
+import Header from '@/components/Header';
 
 export default function CalendarPage() {
   const [isVisible, setIsVisible] = useState<Record<string, boolean>>({});
@@ -144,21 +145,10 @@ export default function CalendarPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-dark)] py-24">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full -translate-y-1/2 translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-[var(--color-accent)] rounded-full translate-y-1/2 -translate-x-1/2" />
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Events Calendar
-          </h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            Workshops, training sessions, camps, and meetups to support your journey
-          </p>
-        </div>
-      </section>
+      <Header 
+        title="Events Calendar"
+        description="Workshops, training sessions, camps, and meetups to support your journey"
+      />
 
       {/* What's Coming Up Section */}
       <section 
@@ -167,8 +157,8 @@ export default function CalendarPage() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`transition-all duration-1000 ${isVisible.events ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="flex items-center justify-between mb-12">
-              <div>
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-12">
+              <div className="text-center lg:text-left">
                 <h2 className="text-4xl font-bold text-[var(--color-primary)] mb-4">
                   What's Coming Up
                 </h2>
@@ -178,22 +168,24 @@ export default function CalendarPage() {
               </div>
               
               {/* Month Navigator */}
-              <div className="flex items-center gap-4 bg-gray-50 rounded-lg p-2">
-                <button
-                  onClick={() => changeMonth(-1)}
-                  className="p-2 hover:bg-white rounded transition-colors"
-                >
-                  <HiChevronLeft className="w-5 h-5 text-gray-600" />
-                </button>
-                <span className="font-semibold text-gray-700 min-w-[120px] text-center">
-                  {selectedMonth.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
-                </span>
-                <button
-                  onClick={() => changeMonth(1)}
-                  className="p-2 hover:bg-white rounded transition-colors"
-                >
-                  <HiChevronRight className="w-5 h-5 text-gray-600" />
-                </button>
+              <div className="flex items-center justify-center lg:justify-end">
+                <div className="flex items-center gap-4 bg-gray-50 rounded-lg p-2">
+                  <button
+                    onClick={() => changeMonth(-1)}
+                    className="p-2 hover:bg-white rounded transition-colors"
+                  >
+                    <HiChevronLeft className="w-5 h-5 text-gray-600" />
+                  </button>
+                  <span className="font-semibold text-gray-700 min-w-[120px] text-center">
+                    {selectedMonth.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+                  </span>
+                  <button
+                    onClick={() => changeMonth(1)}
+                    className="p-2 hover:bg-white rounded transition-colors"
+                  >
+                    <HiChevronRight className="w-5 h-5 text-gray-600" />
+                  </button>
+                </div>
               </div>
             </div>
 

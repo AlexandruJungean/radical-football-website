@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { HiCalendar, HiUserGroup, HiAcademicCap, HiHeart, HiArrowRight, HiTicket, HiSparkles, HiPresentationChartLine, HiLocationMarker } from 'react-icons/hi';
+import Header from '@/components/Header';
 
 export default function ConferencesPage() {
   const [isVisible, setIsVisible] = useState<Record<string, boolean>>({});
@@ -89,21 +90,10 @@ export default function ConferencesPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-dark)] py-24">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full -translate-y-1/2 translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-[var(--color-accent)] rounded-full translate-y-1/2 -translate-x-1/2" />
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Radical Football Conferences
-          </h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            Transformative gatherings for coaches, educators, and anyone passionate about child-centered football
-          </p>
-        </div>
-      </section>
+      <Header 
+        title="Radical Football Conferences"
+        description="Transformative gatherings for coaches, educators, and anyone passionate about child-centered football"
+      />
 
       {/* Conference Overview Section */}
       <section 
@@ -230,19 +220,19 @@ export default function ConferencesPage() {
                     <ul className="space-y-3">
                       <li className="flex items-start gap-3">
                         <span className="text-[var(--color-accent)] mt-1">•</span>
-                        <span>Keynote presentations from world-renowned experts</span>
+                        <span className="text-gray-700">Keynote presentations from world-renowned experts</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-[var(--color-accent)] mt-1">•</span>
-                        <span>Interactive workshops and practical demonstrations</span>
+                        <span className="text-gray-700">Interactive workshops and practical demonstrations</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-[var(--color-accent)] mt-1">•</span>
-                        <span>Panel discussions on modern youth development</span>
+                        <span className="text-gray-700">Panel discussions on modern youth development</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-[var(--color-accent)] mt-1">•</span>
-                        <span>Networking opportunities with progressive coaches</span>
+                        <span className="text-gray-700">Networking opportunities with progressive coaches</span>
                       </li>
                     </ul>
                   </div>
@@ -253,19 +243,19 @@ export default function ConferencesPage() {
                     <ul className="space-y-3">
                       <li className="flex items-start gap-3">
                         <span className="text-[var(--color-accent)] mt-1">•</span>
-                        <span>Youth football coaches seeking new approaches</span>
+                        <span className="text-gray-700">Youth football coaches seeking new approaches</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-[var(--color-accent)] mt-1">•</span>
-                        <span>Club directors and program coordinators</span>
+                        <span className="text-gray-700">Club directors and program coordinators</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-[var(--color-accent)] mt-1">•</span>
-                        <span>Teachers and educators interested in sports pedagogy</span>
+                        <span className="text-gray-700">Teachers and educators interested in sports pedagogy</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-[var(--color-accent)] mt-1">•</span>
-                        <span>Parents who want to support their children better</span>
+                        <span className="text-gray-700">Parents who want to support their children better</span>
                       </li>
                     </ul>
                   </div>
@@ -314,8 +304,8 @@ export default function ConferencesPage() {
                 <div
                   key={conference.year}
                   className={`bg-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-700 ${
-                    isVisible.past ? 'opacity-100 translate-x-0' : 'opacity-0'
-                  } ${index % 2 === 0 ? '-translate-x-10' : 'translate-x-10'}`}
+                    isVisible.past ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  }`}
                   style={{ transitionDelay: `${200 + index * 100}ms` }}
                 >
                   <div className="grid md:grid-cols-2 gap-0">
