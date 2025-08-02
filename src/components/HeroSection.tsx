@@ -124,7 +124,7 @@ const HeroSection = () => {
                   height={800}
                   className="w-full h-auto max-w-lg mx-auto"
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  srcSet="/images/transparent-background/sliding-tackle-p-500.png 500w, /images/transparent-background/sliding-tackle-p-800.png 800w, /images/transparent-background/sliding-tackle-p-1080.png 1080w, /images/transparent-background/sliding-tackle.png 1920w"
+                  srcSet="/images/transparent-background/sliding-tackle-p-500.png 500w, /images/transparent-background/sliding-tackle-p-800.png 800w, /images/transparent-background/sliding-tackle.png 1920w"
                 />
               </div>
               

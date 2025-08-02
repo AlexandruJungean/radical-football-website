@@ -197,6 +197,7 @@ export default function ConferencesPage() {
                   alt="2024 Radical Football Conference"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 80vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8 text-white">
@@ -324,6 +325,7 @@ export default function ConferencesPage() {
                         alt={`${conference.year} Conference`}
                         fill
                         className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
                       />
                     </div>
                     <div className={`p-8 ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'}`}>

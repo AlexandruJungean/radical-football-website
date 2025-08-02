@@ -176,6 +176,7 @@ export default function ConferenceDetailPage() {
             alt="Conference Banner"
             fill
             className="object-cover opacity-20"
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary-dark)] to-transparent" />
         </div>
@@ -290,6 +291,7 @@ export default function ConferenceDetailPage() {
                       alt={speaker.name}
                       fill
                       className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4 text-white">
@@ -411,19 +413,19 @@ export default function ConferenceDetailPage() {
                 <ul className="text-left space-y-2 mb-8">
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
-                    <span>Full conference access</span>
+                    <span className="text-gray-700">Full conference access</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
-                    <span>Conference materials</span>
+                    <span className="text-gray-700">Conference materials</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
-                    <span>Coffee breaks & lunch</span>
+                    <span className="text-gray-700">Coffee breaks & lunch</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
-                    <span>Conference dinner</span>
+                    <span className="text-gray-700">Conference dinner</span>
                   </li>
                 </ul>
                 <button className="w-full bg-[var(--color-accent)] text-white px-6 py-3 rounded-full font-semibold hover:bg-[var(--color-accent)]/90 transition-colors">
@@ -441,23 +443,23 @@ export default function ConferenceDetailPage() {
                 <ul className="text-left space-y-2 mb-8">
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
-                    <span>Full conference access</span>
+                    <span className="text-gray-700">Full conference access</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
-                    <span>Conference materials</span>
+                    <span className="text-gray-700">Conference materials</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
-                    <span>Coffee breaks & lunch</span>
+                    <span className="text-gray-700">Coffee breaks & lunch</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
-                    <span>Conference dinner</span>
+                    <span className="text-gray-700">Conference dinner</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
-                    <span>Certificate of attendance</span>
+                    <span className="text-gray-700">Certificate of attendance</span>
                   </li>
                 </ul>
                 <button className="w-full bg-[var(--color-accent)] text-white px-6 py-3 rounded-full font-semibold hover:bg-[var(--color-accent)]/90 transition-colors">
@@ -472,19 +474,19 @@ export default function ConferenceDetailPage() {
                 <ul className="text-left space-y-2 mb-8">
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
-                    <span>Everything in Regular</span>
+                    <span className="text-gray-700">Everything in Regular</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
-                    <span>15% group discount</span>
+                    <span className="text-gray-700">15% group discount</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
-                    <span>Priority seating</span>
+                    <span className="text-gray-700">Priority seating</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
-                    <span>Group photo with speakers</span>
+                    <span className="text-gray-700">Group photo with speakers</span>
                   </li>
                 </ul>
                 <button className="w-full bg-[var(--color-accent)] text-white px-6 py-3 rounded-full font-semibold hover:bg-[var(--color-accent)]/90 transition-colors">

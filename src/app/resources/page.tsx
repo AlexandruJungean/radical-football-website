@@ -257,6 +257,7 @@ export default function ResourcesPage() {
                           alt={resource.title}
                           fill
                           className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         />
                         <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
                           <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
@@ -328,6 +329,7 @@ export default function ResourcesPage() {
                       alt={`Issue ${issue.issue} Cover`}
                       fill
                       className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute bottom-8 left-8">
@@ -380,6 +382,7 @@ export default function ResourcesPage() {
                       alt={`Issue ${issue.issue} Cover`}
                       fill
                       className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute bottom-4 left-4">

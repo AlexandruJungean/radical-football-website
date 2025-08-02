@@ -118,6 +118,7 @@ export default function AboutPage() {
                   alt="Radical Football community gathering"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[var(--color-accent)] rounded-full opacity-20" />

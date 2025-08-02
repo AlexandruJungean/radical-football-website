@@ -216,15 +216,15 @@ export default function ContactPage() {
                     <div className="relative">
                       <HiUser className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                       <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        placeholder="Enter your full name"
-                        className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[var(--color-accent)]"
-                      />
+                         type="text"
+                         id="name"
+                         name="name"
+                         value={formData.name}
+                         onChange={handleChange}
+                         required
+                         placeholder="Enter your full name"
+                         className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[var(--color-accent)] placeholder-gray-400 text-gray-900"
+                       />
                     </div>
                   </div>
 
@@ -236,15 +236,15 @@ export default function ContactPage() {
                     <div className="relative">
                       <HiMail className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                       <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        placeholder="your@email.com"
-                        className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[var(--color-accent)]"
-                      />
+                         type="email"
+                         id="email"
+                         name="email"
+                         value={formData.email}
+                         onChange={handleChange}
+                         required
+                         placeholder="your@email.com"
+                         className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[var(--color-accent)] placeholder-gray-400 text-gray-900"
+                       />
                     </div>
                   </div>
                 </div>
@@ -291,15 +291,15 @@ export default function ContactPage() {
                     Your Message *
                   </label>
                   <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    placeholder="Tell us how we can help..."
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[var(--color-accent)] resize-none"
-                  />
+                     id="message"
+                     name="message"
+                     value={formData.message}
+                     onChange={handleChange}
+                     required
+                     rows={6}
+                     placeholder="Tell us how we can help..."
+                     className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[var(--color-accent)] resize-none placeholder-gray-400 text-gray-900"
+                   />
                 </div>
 
                 {/* Submit Button */}

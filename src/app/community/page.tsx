@@ -147,6 +147,7 @@ export default function CommunityPage() {
                         alt={member.name}
                         fill
                         className="object-cover rounded-full"
+                        sizes="128px"
                       />
                     </div>
                     <div className="flex-grow">
@@ -196,6 +197,7 @@ export default function CommunityPage() {
                     alt="Ionuț Rada"
                     fill
                     className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[var(--color-accent)] rounded-full opacity-20" />
@@ -287,6 +289,7 @@ export default function CommunityPage() {
                       alt={story.title}
                       fill
                       className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4">
@@ -334,27 +337,27 @@ export default function CommunityPage() {
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 bg-white rounded-lg">
-                    <span className="font-semibold">Bucharest</span>
+                    <span className="font-semibold text-gray-800">Bucharest</span>
                     <span className="text-[var(--color-accent)]">25 clubs</span>
                   </div>
                   <div className="flex items-center justify-between p-4 bg-white rounded-lg">
-                    <span className="font-semibold">Cluj-Napoca</span>
+                    <span className="font-semibold text-gray-800">Cluj-Napoca</span>
                     <span className="text-[var(--color-accent)]">15 clubs</span>
                   </div>
                   <div className="flex items-center justify-between p-4 bg-white rounded-lg">
-                    <span className="font-semibold">Timișoara</span>
+                    <span className="font-semibold text-gray-800">Timișoara</span>
                     <span className="text-[var(--color-accent)]">12 clubs</span>
                   </div>
                   <div className="flex items-center justify-between p-4 bg-white rounded-lg">
-                    <span className="font-semibold">Oradea</span>
+                    <span className="font-semibold text-gray-800">Oradea</span>
                     <span className="text-[var(--color-accent)]">18 clubs</span>
                   </div>
                   <div className="flex items-center justify-between p-4 bg-white rounded-lg">
-                    <span className="font-semibold">Constanța</span>
+                    <span className="font-semibold text-gray-800">Constanța</span>
                     <span className="text-[var(--color-accent)]">8 clubs</span>
                   </div>
                   <div className="flex items-center justify-between p-4 bg-white rounded-lg">
-                    <span className="font-semibold">Rural Areas</span>
+                    <span className="font-semibold text-gray-800">Rural Areas</span>
                     <span className="text-[var(--color-accent)]">30+ villages</span>
                   </div>
                 </div>
