@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { HiCalendar, HiClock, HiTicket, HiArrowLeft, HiArrowRight, HiUserGroup, HiSparkles, HiExternalLink, HiLocationMarker } from 'react-icons/hi';
+import { HiClock, HiTicket, HiArrowLeft, HiArrowRight, HiUserGroup, HiSparkles, HiLocationMarker } from 'react-icons/hi';
 
 // Mock speaker data - in production this would come from a database
 const speakers2024 = [
@@ -238,7 +238,7 @@ export default function ConferenceDetailPage() {
               <p className="text-xl text-gray-600 leading-relaxed">
                 Join us for the most important gathering of progressive coaches, educators, and football 
                 enthusiasts in Romania. This conference brings together international experts who are 
-                revolutionizing youth football by putting children's development, joy, and well-being first.
+                revolutionizing youth football by putting children&apos;s development, joy, and well-being first.
               </p>
             </div>
 

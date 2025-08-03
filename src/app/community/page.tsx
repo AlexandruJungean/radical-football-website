@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { HiHeart, HiUserGroup, HiStar, HiChat, HiGlobe, HiSparkles } from 'react-icons/hi';
+import { HiHeart, HiUserGroup, HiStar, HiGlobe, HiSparkles } from 'react-icons/hi';
 import Header from '@/components/Header';
 import { HiMapPin } from 'react-icons/hi2';
 
@@ -161,7 +161,7 @@ export default function CommunityPage() {
 
             <div className="mt-12 text-center">
               <p className="text-gray-600 mb-6">
-                We're always looking for passionate individuals to join our mission
+                We&apos;re always looking for passionate individuals to join our mission
               </p>
               <button className="inline-flex items-center px-6 py-3 bg-[var(--color-accent)] text-white font-semibold rounded-full hover:bg-[var(--color-accent)]/90 transition-colors">
                 <HiSparkles className="mr-2 w-5 h-5" />
@@ -206,18 +206,18 @@ export default function CommunityPage() {
                 
                 <div className="space-y-4 text-white/90 text-lg leading-relaxed">
                   <p>
-                    "Being the Romania Ambassador for Radical Football is more than a title - it's a responsibility 
-                    I carry with pride and purpose. Every day, I see the impact our philosophy has on young players, 
-                    and it reinforces my belief that we're on the right path."
+                  &quot;Being the Romania Ambassador for Radical Football is more than a title - it&apos;s a responsibility 
+                  I carry with pride and purpose. Every day, I see the impact our philosophy has on young players, 
+                  and it reinforces my belief that we&apos;re on the right path.&quot;
                   </p>
                   <p>
-                    "My role is to be a bridge - connecting international best practices with Romanian football culture, 
-                    supporting coaches who want to change, and most importantly, being a voice for the children who 
-                    deserve better from youth football."
+                  &quot;My role is to be a bridge - connecting international best practices with Romanian football culture, 
+                  supporting coaches who want to change, and most importantly, being a voice for the children who 
+                  deserve better from youth football.&quot;
                   </p>
                   <p>
-                    "Together with our community, we're not just changing how football is taught; we're changing lives. 
-                    And that's what makes this movement so special."
+                  &quot;Together with our community, we&apos;re not just changing how football is taught; we&apos;re changing lives. 
+                  And that&apos;s what makes this movement so special.&quot;
                   </p>
                 </div>
 
@@ -430,7 +430,7 @@ export default function CommunityPage() {
                 every volunteer who gives their time - you are all part of this transformation.
               </p>
               <p className="text-lg font-semibold">
-                Together, we're creating a better future for youth football.
+                Together, we&apos;re creating a better future for youth football.
               </p>
             </div>
           </div>

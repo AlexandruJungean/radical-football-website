@@ -73,8 +73,8 @@ const SponsorsSection = () => {
             Our Partners & Sponsors
           </h2>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            We're grateful for the support of our amazing partners who help us make 
-            Radical Football possible. Together, we're building a stronger community.
+            We&apos;re grateful for the support of our amazing partners who help us make 
+            Radical Football possible. Together, we&apos;re building a stronger community.
           </p>
         </div>
 
@@ -84,7 +84,7 @@ const SponsorsSection = () => {
           <div className="hidden lg:block">
             <div className="flex animate-marquee">
               {/* First set of sponsors */}
-              {sponsors.map((sponsor, index) => (
+              {sponsors.map((sponsor) => (
                 <a
                   key={`desktop-1-${sponsor.name}`}
                   href={sponsor.url}
@@ -102,7 +102,7 @@ const SponsorsSection = () => {
                 </a>
               ))}
               {/* Duplicate set for seamless loop */}
-              {sponsors.map((sponsor, index) => (
+              {sponsors.map((sponsor) => (
                 <a
                   key={`desktop-2-${sponsor.name}`}
                   href={sponsor.url}
@@ -126,7 +126,7 @@ const SponsorsSection = () => {
           <div className="lg:hidden space-y-4">
             {/* First row */}
             <div className="flex animate-marquee">
-              {sponsors.slice(0, Math.ceil(sponsors.length / 2)).map((sponsor, index) => (
+              {sponsors.slice(0, Math.ceil(sponsors.length / 2)).map((sponsor) => (
                 <a
                   key={`mobile-1-${sponsor.name}`}
                   href={sponsor.url}
@@ -144,7 +144,7 @@ const SponsorsSection = () => {
                 </a>
               ))}
               {/* Duplicate set for seamless loop */}
-              {sponsors.slice(0, Math.ceil(sponsors.length / 2)).map((sponsor, index) => (
+              {sponsors.slice(0, Math.ceil(sponsors.length / 2)).map((sponsor) => (
                 <a
                   key={`mobile-1-dup-${sponsor.name}`}
                   href={sponsor.url}
@@ -165,7 +165,7 @@ const SponsorsSection = () => {
 
             {/* Second row */}
             <div className="flex animate-marquee-reverse">
-              {sponsors.slice(Math.ceil(sponsors.length / 2)).map((sponsor, index) => (
+              {sponsors.slice(Math.ceil(sponsors.length / 2)).map((sponsor) => (
                 <a
                   key={`mobile-2-${sponsor.name}`}
                   href={sponsor.url}
@@ -183,7 +183,7 @@ const SponsorsSection = () => {
                 </a>
               ))}
               {/* Duplicate set for seamless loop */}
-              {sponsors.slice(Math.ceil(sponsors.length / 2)).map((sponsor, index) => (
+              {sponsors.slice(Math.ceil(sponsors.length / 2)).map((sponsor) => (
                 <a
                   key={`mobile-2-dup-${sponsor.name}`}
                   href={sponsor.url}
@@ -207,7 +207,7 @@ const SponsorsSection = () => {
         {/* Partnership Message */}
         <div className="text-center">
           <p className="text-gray-300 mb-6 text-lg">
-            Interested in partnering with us? We'd love to hear from you!
+            Interested in partnering with us? We&apos;d love to hear from you!
           </p>
           <Link href="/contact">
             <button className="bg-white text-[var(--color-dark-bg)] px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-semibold text-lg">

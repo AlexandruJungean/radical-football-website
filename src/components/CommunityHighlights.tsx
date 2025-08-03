@@ -98,7 +98,7 @@ const CommunityHighlights = () => {
                     {story.author} • {story.location}
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    "{story.content}"
+                    &quot;{story.content}&quot;
                   </p>
                 </div>
               </div>
@@ -110,7 +110,7 @@ const CommunityHighlights = () => {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-3xl font-bold mb-6">
-                  How We're Making a Difference Together
+                  How We&apos;re Making a Difference Together
                 </h3>
                 <p className="text-lg text-white/90 mb-6 leading-relaxed">
                   Across Romania, coaches, parents, and communities are embracing a new way of thinking about youth football. 

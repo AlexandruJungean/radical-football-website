@@ -85,8 +85,8 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-700">
                 <p className="text-lg leading-relaxed">
-                  Radical Football began as a simple question: "What if we put children's happiness and development 
-                  before winning?" This question, asked by founder Flavius Andrișca, sparked a movement that is 
+                  Radical Football began as a simple question: &quot;What if we put children&apos;s happiness and development 
+                  before winning?&quot; This question, asked by founder Flavius Andrișca, sparked a movement that is 
                   transforming youth football across Romania.
                 </p>
                 <p className="text-lg leading-relaxed">
@@ -172,7 +172,7 @@ export default function AboutPage() {
                   positive environments for all children to thrive.
                 </p>
                 <p className="text-xl font-semibold text-[var(--color-accent)]">
-                  This is not just about changing football. It's about changing lives.
+                  This is not just about changing football. It&apos;s about changing lives.
                 </p>
               </div>
             </div>

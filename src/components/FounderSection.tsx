@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import ResponsiveImage from './ResponsiveImage';
 import Link from 'next/link';
 import { HiArrowRight } from 'react-icons/hi';
@@ -58,15 +57,15 @@ const FounderSection = () => {
               
               <p>
                 Radical Football was born from this vision: a movement that puts children first, 
-                relationships before results, and community above competition. It's not just about 
-                teaching football—it's about building better human beings.
+                relationships before results, and community above competition. It&apos;s not just about 
+                teaching football—it&apos;s about building better human beings.
               </p>
             </div>
 
             {/* Founder's Quote */}
             <blockquote className="border-l-4 border-[var(--color-accent)] pl-6 italic text-gray-700 text-lg">
-              "Football is the vehicle, but the destination is a stronger, more connected community 
-              where every child feels valued and supported."
+              &quot;Football is the vehicle, but the destination is a stronger, more connected community 
+              where every child feels valued and supported.&quot;
             </blockquote>
 
             {/* Call to Action */}

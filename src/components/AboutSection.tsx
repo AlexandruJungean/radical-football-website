@@ -31,10 +31,10 @@ const AboutSection = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)] mb-4">
-              What We're About
+              What We&apos;re About
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Radical Football is more than a movement - it's a philosophy that puts children at the heart of the beautiful game
+              Radical Football is more than a movement - it&apos;s a philosophy that puts children at the heart of the beautiful game
             </p>
           </div>
 
@@ -49,8 +49,8 @@ const AboutSection = () => {
                 Simple Philosophy
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                We believe football should be about joy, learning, and personal growth. It's not about winning at all costs - 
-                it's about developing confident, creative, and compassionate young people through the game they love.
+                We believe football should be about joy, learning, and personal growth. It&apos;s not about winning at all costs - 
+                it&apos;s about developing confident, creative, and compassionate young people through the game they love.
               </p>
             </div>
 
@@ -63,7 +63,7 @@ const AboutSection = () => {
                 Children First
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Every decision we make starts with one question: "Is this best for the child?" We focus on their 
+                Every decision we make starts with one question: &quot;Is this best for the child?&quot; We focus on their 
                 enjoyment, development, and well-being above results, trophies, or adult ambitions.
               </p>
             </div>

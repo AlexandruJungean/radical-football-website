@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { HiUsers, HiHeart, HiChat, HiPencil, HiShare, HiMicrophone, HiTranslate, HiCalendar, HiLightBulb, HiArrowRight } from 'react-icons/hi';
+import { HiHeart, HiChat, HiPencil, HiShare, HiMicrophone, HiTranslate, HiLightBulb, HiArrowRight } from 'react-icons/hi';
 import Header from '@/components/Header';
 
 export default function GetInvolvedPage() {
@@ -157,7 +157,7 @@ export default function GetInvolvedPage() {
                   </p>
                   
                   <div className="mb-8">
-                    <h4 className="font-semibold text-gray-700 mb-3">What we're looking for:</h4>
+                    <h4 className="font-semibold text-gray-700 mb-3">What we&apos;re looking for:</h4>
                     <ul className="space-y-2">
                       {opportunity.requirements.map((req, idx) => (
                         <li key={idx} className="flex items-start gap-2">
@@ -234,7 +234,7 @@ export default function GetInvolvedPage() {
                 Ready to Share?
               </h3>
               <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
-                We're always looking for authentic voices and fresh perspectives. 
+                We&apos;re always looking for authentic voices and fresh perspectives. 
                 Your contribution could be exactly what someone needs to hear.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -328,8 +328,8 @@ export default function GetInvolvedPage() {
             Your Skills, Your Passion, Our Mission
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Whether you have hours to give or just a few minutes, whether you're an expert or just starting out, 
-            there's a place for you in the Radical Football community.
+            Whether you have hours to give or just a few minutes, whether you&apos;re an expert or just starting out, 
+            there&apos;s a place for you in the Radical Football community.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
             <div className="bg-white/10 rounded-lg p-4 text-white">

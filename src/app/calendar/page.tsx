@@ -160,7 +160,7 @@ export default function CalendarPage() {
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-12">
               <div className="text-center lg:text-left">
                 <h2 className="text-4xl font-bold text-[var(--color-primary)] mb-4">
-                  What's Coming Up
+                  What&apos;s Coming Up
                 </h2>
                 <p className="text-xl text-gray-600">
                   Join us at these upcoming events and activities
@@ -265,7 +265,7 @@ export default function CalendarPage() {
             {/* View All Events */}
             <div className="mt-12 text-center">
               <p className="text-gray-600 mb-6">
-                Can't find what you're looking for? We have more events coming soon!
+                Can&apos;t find what you&apos;re looking for? We have more events coming soon!
               </p>
               <button className="inline-flex items-center px-6 py-3 bg-[var(--color-primary)] text-white font-semibold rounded-full hover:bg-[var(--color-primary-dark)] transition-colors">
                 View Full Calendar

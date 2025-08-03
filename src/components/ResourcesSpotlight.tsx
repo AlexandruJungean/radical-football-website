@@ -163,7 +163,7 @@ const ResourcesSpotlight = () => {
                   Radical Football Magazine
                 </h4>
                 <p className="text-gray-600 mb-4">
-                  Issue #5: "The Power of Play"
+                  Issue #5: &quot;The Power of Play&quot;
                 </p>
                 <p className="text-gray-700 mb-6">
                   Featuring interviews with leading coaches, case studies from successful programs, 

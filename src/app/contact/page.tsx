@@ -147,7 +147,7 @@ export default function ContactPage() {
                   </h3>
                   <p className="text-lg text-white/90 mb-6">
                     Our team is available during office hours to answer your questions and provide support. 
-                    Don't hesitate to reach out - we love hearing from our community!
+                    Don&apos;t hesitate to reach out - we love hearing from our community!
                   </p>
                   <div className="flex items-center gap-2">
                     <HiGlobe className="w-5 h-5 text-[var(--color-accent)]" />
@@ -191,7 +191,7 @@ export default function ContactPage() {
                 Send Us a Message
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Fill out the form below and we'll get back to you as soon as possible
+                Fill out the form below and we&apos;ll get back to you as soon as possible
               </p>
             </div>
 

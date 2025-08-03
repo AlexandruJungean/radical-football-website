@@ -40,13 +40,13 @@ const ValuesSection = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             These four pillars guide everything we do at Radical Football. 
-            They're not just words—they're the foundation of our movement.
+            They&apos;re not just words—they&apos;re the foundation of our movement.
           </p>
         </div>
 
         {/* Values Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {values.map((value, index) => (
+          {values.map((value) => (
             <div
               key={value.title}
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center group"

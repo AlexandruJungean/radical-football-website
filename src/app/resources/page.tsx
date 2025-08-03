@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { HiBookOpen, HiPlay, HiNewspaper, HiDocumentText, HiMicrophone, HiArrowRight, HiSearch, HiFilter, HiDownload, HiExternalLink } from 'react-icons/hi';
+import { HiBookOpen, HiPlay, HiDocumentText, HiMicrophone, HiArrowRight, HiSearch, HiFilter, HiDownload, HiExternalLink } from 'react-icons/hi';
 import Header from '@/components/Header';
 
 export default function ResourcesPage() {
@@ -455,7 +455,7 @@ export default function ResourcesPage() {
 
             <div className="mt-12 text-center">
               <p className="text-gray-600 mb-6">
-                Have a resource to share? We're always looking for quality content
+                Have a resource to share? We&apos;re always looking for quality content
               </p>
               <Link
                 href="/get-involved"
