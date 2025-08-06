@@ -50,45 +50,40 @@ const CommunityMap = ({ className = '' }: CommunityMapProps) => {
         )}
       </div>
 
-      {/* Community Locations List */}
-      <div className="space-y-4">
-        <h3 className="text-lg font-semibold text-[var(--color-primary)] mb-4">
-          Active Communities
-        </h3>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {COMMUNITY_LOCATIONS.map((location) => (
-            <div
-              key={location.id}
-              className={`p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 ${
-                selectedLocation?.id === location.id
-                  ? 'border-[var(--color-accent)] bg-[var(--color-accent)]/5'
-                  : 'border-gray-200 hover:border-[var(--color-primary)]/30 hover:bg-gray-50'
-              }`}
-              onClick={() => setSelectedLocation(location)}
-            >
-              <div className="flex items-start justify-between">
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-2">
-                    <HiLocationMarker className="w-4 h-4 text-[var(--color-accent)]" />
-                    <h4 className="font-semibold text-gray-900">{location.name}</h4>
-                  </div>
-                  <p className="text-sm text-gray-600 mb-2">{location.description}</p>
-                  <div className="flex items-center gap-2">
-                    <HiUserGroup className="w-4 h-4 text-[var(--color-accent)]" />
-                    <span className="text-sm font-medium text-[var(--color-accent)]">
-                      {location.clubs} clubs
-                    </span>
-                  </div>
-                </div>
-                {selectedLocation?.id === location.id && (
-                  <div className="w-2 h-2 bg-[var(--color-accent)] rounded-full"></div>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+             {/* Participant Cities List */}
+       <div className="space-y-4">
+         <h3 className="text-lg font-semibold text-[var(--color-primary)] mb-4">
+           Cities Our Participants Come From
+         </h3>
+         
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+           {COMMUNITY_LOCATIONS.map((location) => (
+             <div
+               key={location.id}
+               className={`p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 ${
+                 selectedLocation?.id === location.id
+                   ? 'border-[var(--color-accent)] bg-[var(--color-accent)]/5'
+                   : 'border-gray-200 hover:border-[var(--color-primary)]/30 hover:bg-gray-50'
+               }`}
+               onClick={() => setSelectedLocation(location)}
+             >
+               <div className="flex items-start justify-between">
+                 <div className="flex-1">
+                   <div className="flex items-center gap-2 mb-2">
+                     <HiLocationMarker className="w-4 h-4 text-[var(--color-accent)]" />
+                     <h4 className="font-semibold text-gray-900">{location.name}</h4>
+                   </div>
+                   <p className="text-sm text-gray-600 mb-2">{location.description}</p>
+                   
+                 </div>
+                 {selectedLocation?.id === location.id && (
+                   <div className="w-2 h-2 bg-[var(--color-accent)] rounded-full"></div>
+                 )}
+               </div>
+             </div>
+           ))}
+         </div>
+       </div>
 
       {/* Selected Location Details */}
       {selectedLocation && (
@@ -97,15 +92,11 @@ const CommunityMap = ({ className = '' }: CommunityMapProps) => {
             {selectedLocation.name}
           </h4>
           <p className="text-sm text-gray-700 mb-3">{selectedLocation.description}</p>
-          <div className="flex items-center gap-4 text-sm">
-            <span className="flex items-center gap-1">
-              <HiUserGroup className="w-4 h-4 text-[var(--color-accent)]" />
-              <span className="font-medium">{selectedLocation.clubs} active clubs</span>
-            </span>
-            <button className="text-[var(--color-accent)] hover:underline font-medium">
-              View details →
-            </button>
-          </div>
+                     <div className="flex items-center gap-4 text-sm">
+             <button className="text-[var(--color-accent)] hover:underline font-medium">
+               View details →
+             </button>
+           </div>
         </div>
       )}
 
