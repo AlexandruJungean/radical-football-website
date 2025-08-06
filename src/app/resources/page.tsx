@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { HiBookOpen, HiPlay, HiDocumentText, HiMicrophone, HiArrowRight, HiSearch, HiFilter, HiDownload, HiExternalLink } from 'react-icons/hi';
 import Header from '@/components/Header';
+import { BreakSpaceSymbol } from '@/components/SymbolSystem';
 
 export default function ResourcesPage() {
   const [isVisible, setIsVisible] = useState<Record<string, boolean>>({});
@@ -464,6 +465,54 @@ export default function ResourcesPage() {
                 Submit a Resource
                 <HiArrowRight className="ml-2 w-5 h-5" />
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Break Spaces Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Learning Spaces
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Sometimes learning happens in unexpected ways. These spaces are for reflection, confusion, and growth.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* What I Got Wrong */}
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <BreakSpaceSymbol type="WHAT_I_GOT_WRONG" size="lg" />
+                <h3 className="text-xl font-semibold text-gray-900">
+                  What I Got Wrong
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-6">
+                This is where we revisit things we misunderstood — not with guilt, but with curiosity.
+              </p>
+              <button className="w-full px-4 py-2 bg-green-50 border-2 border-green-200 text-green-800 rounded-lg hover:bg-green-100 transition-colors duration-200">
+                Share Your Learning
+              </button>
+            </div>
+
+            {/* Reflection Blocked */}
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <BreakSpaceSymbol type="REFLECTION_BLOCKED" size="lg" />
+                <h3 className="text-xl font-semibold text-gray-900">
+                  Reflection Blocked
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-6">
+                When a resource doesn&apos;t help, name that pause. This is part of your learning.
+              </p>
+              <button className="w-full px-4 py-2 bg-red-50 border-2 border-red-200 text-red-800 rounded-lg hover:bg-red-100 transition-colors duration-200">
+                I&apos;m Stuck Here
+              </button>
             </div>
           </div>
         </div>

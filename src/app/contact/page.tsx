@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { HiMail, HiPhone, HiGlobe, HiClock, HiLocationMarker, HiChat, HiUser, HiInformationCircle, HiTicket, HiUserGroup, HiArrowRight } from 'react-icons/hi';
+import { HiMail, HiPhone, HiGlobe, HiClock, HiLocationMarker, HiChat, HiUser, HiInformationCircle, HiTicket, HiUserGroup, HiArrowRight, HiHeart, HiCreditCard, HiGift } from 'react-icons/hi';
 import Header from '@/components/Header';
 
 export default function ContactPage() {
@@ -12,6 +12,8 @@ export default function ContactPage() {
     subject: 'general',
     message: ''
   });
+  const [donationAmount, setDonationAmount] = useState('50');
+  const [donationType, setDonationType] = useState('one-time');
   const sectionsRef = useRef<Record<string, HTMLElement | null>>({});
 
   useEffect(() => {
@@ -42,6 +44,12 @@ export default function ContactPage() {
     console.log('Form submitted:', formData);
   };
 
+  const handleDonation = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle donation submission
+    console.log('Donation submitted:', { amount: donationAmount, type: donationType });
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -52,28 +60,16 @@ export default function ContactPage() {
   const contactInfo = [
     {
       icon: HiPhone,
-      title: 'Phone Numbers',
+      title: 'Phone',
       items: [
-        { label: 'Main Office', value: '+40 745 123 456' },
-        { label: 'Conference Info', value: '+40 745 789 012' }
+        { label: 'Main Contact', value: '+40751342405' }
       ]
     },
     {
       icon: HiMail,
-      title: 'Email Addresses',
+      title: 'Email',
       items: [
-        { label: 'General Inquiries', value: 'contact@radicalfootball.ro' },
-        { label: 'Conference', value: 'conference@radicalfootball.ro' },
-        { label: 'Partnerships', value: 'partners@radicalfootball.ro' }
-      ]
-    },
-    {
-      icon: HiClock,
-      title: 'Office Hours',
-      items: [
-        { label: 'Monday - Friday', value: '09:00 - 18:00' },
-        { label: 'Saturday', value: '10:00 - 14:00' },
-        { label: 'Sunday', value: 'Closed' }
+        { label: 'General Inquiries', value: 'contact@radicalfootball.ro' }
       ]
     }
   ];
@@ -85,11 +81,24 @@ export default function ContactPage() {
     { value: 'partnership', label: 'Partnership Opportunities', icon: HiUserGroup }
   ];
 
+  const donationAmounts = [
+    { value: '25', label: '€25' },
+    { value: '50', label: '€50' },
+    { value: '100', label: '€100' },
+    { value: '250', label: '€250' },
+    { value: 'custom', label: 'Custom' }
+  ];
+
+  const donationTypes = [
+    { value: 'one-time', label: 'One-time Donation', icon: HiGift },
+    { value: 'monthly', label: 'Monthly Support', icon: HiHeart }
+  ];
+
   return (
     <main className="min-h-screen bg-white">
       <Header 
-        title="Contact Us"
-        description="We're here to help. Reach out with questions, ideas, or just to say hello"
+        title="Contact & Support"
+        description="Get in touch with us or support our mission through donations"
       />
 
       {/* Get in Touch Section */}
@@ -108,7 +117,7 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
               {contactInfo.map((info, index) => (
                 <div
                   key={info.title}
@@ -146,7 +155,7 @@ export default function ContactPage() {
                     Prefer Direct Communication?
                   </h3>
                   <p className="text-lg text-white/90 mb-6">
-                    Our team is available during office hours to answer your questions and provide support. 
+                    Our team is available to answer your questions and provide support. 
                     Don&apos;t hesitate to reach out - we love hearing from our community!
                   </p>
                   <div className="flex items-center gap-2">
@@ -179,24 +188,200 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Form Section */}
+      {/* Support & Donations Section */}
       <section 
-        ref={(el) => { sectionsRef.current['form'] = el; }}
+        ref={(el) => { sectionsRef.current['support'] = el; }}
         className="py-20 bg-gray-50"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`transition-all duration-1000 ${isVisible.form ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="text-center mb-12">
+          <div className={`transition-all duration-1000 ${isVisible.support ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-[var(--color-primary)] mb-4">
-                Send Us a Message
+                Support Our Mission
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Fill out the form below and we&apos;ll get back to you as soon as possible
+                Help us continue transforming youth football across Romania
               </p>
             </div>
 
             <div className="max-w-4xl mx-auto">
-              <form onSubmit={handleSubmit} className="bg-white rounded-3xl shadow-xl p-8 md:p-12">
+              <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12">
+                <div className="text-center mb-8">
+                  <HiHeart className="w-16 h-16 text-[var(--color-accent)] mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-[var(--color-primary)] mb-4">
+                    Make a Donation
+                  </h3>
+                  <p className="text-gray-600">
+                    Your support helps us reach more coaches, train more educators, and create better experiences for young players.
+                  </p>
+                </div>
+
+                <form onSubmit={handleDonation} className="space-y-8">
+                  {/* Donation Type */}
+                  <div>
+                    <label className="block text-gray-700 font-semibold mb-4">
+                      Choose Your Support Type
+                    </label>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {donationTypes.map((type) => (
+                        <label
+                          key={type.value}
+                          className={`cursor-pointer rounded-lg border-2 p-6 text-center transition-all ${
+                            donationType === type.value
+                              ? 'border-[var(--color-accent)] bg-[var(--color-accent)]/5'
+                              : 'border-gray-200 hover:border-gray-300'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="donationType"
+                            value={type.value}
+                            checked={donationType === type.value}
+                            onChange={(e) => setDonationType(e.target.value)}
+                            className="sr-only"
+                          />
+                          <type.icon className={`w-8 h-8 mx-auto mb-3 ${
+                            donationType === type.value ? 'text-[var(--color-accent)]' : 'text-gray-400'
+                          }`} />
+                          <span className={`font-medium ${
+                            donationType === type.value ? 'text-[var(--color-accent)]' : 'text-gray-600'
+                          }`}>
+                            {type.label}
+                          </span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Donation Amount */}
+                  <div>
+                    <label className="block text-gray-700 font-semibold mb-4">
+                      Select Amount
+                    </label>
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+                      {donationAmounts.map((amount) => (
+                        <label
+                          key={amount.value}
+                          className={`cursor-pointer rounded-lg border-2 p-4 text-center transition-all ${
+                            donationAmount === amount.value
+                              ? 'border-[var(--color-accent)] bg-[var(--color-accent)]/5'
+                              : 'border-gray-200 hover:border-gray-300'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="donationAmount"
+                            value={amount.value}
+                            checked={donationAmount === amount.value}
+                            onChange={(e) => setDonationAmount(e.target.value)}
+                            className="sr-only"
+                          />
+                          <span className={`font-semibold ${
+                            donationAmount === amount.value ? 'text-[var(--color-accent)]' : 'text-gray-600'
+                          }`}>
+                            {amount.label}
+                          </span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Custom Amount */}
+                  {donationAmount === 'custom' && (
+                    <div>
+                      <label htmlFor="customAmount" className="block text-gray-700 font-semibold mb-2">
+                        Custom Amount (€)
+                      </label>
+                      <input
+                        type="number"
+                        id="customAmount"
+                        min="1"
+                        placeholder="Enter amount"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[var(--color-accent)]"
+                      />
+                    </div>
+                  )}
+
+                  {/* Impact Information */}
+                  <div className="bg-[var(--color-primary)]/5 border border-[var(--color-primary)]/20 rounded-lg p-6">
+                    <h4 className="font-semibold text-[var(--color-primary)] mb-3">Your Impact:</h4>
+                    <ul className="space-y-2 text-sm text-gray-700">
+                      <li className="flex items-center gap-2">
+                        <span className="text-[var(--color-accent)]">•</span>
+                        <span>€25: Provides training materials for one coach</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-[var(--color-accent)]">•</span>
+                        <span>€50: Supports one workshop for youth coaches</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-[var(--color-accent)]">•</span>
+                        <span>€100: Helps organize a local community event</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-[var(--color-accent)]">•</span>
+                        <span>€250: Contributes to our annual conference</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Submit Button */}
+                  <div className="text-center">
+                    <button
+                      type="submit"
+                      className="flex items-center justify-center w-full md:w-auto px-8 py-4 bg-[var(--color-accent)] text-white font-semibold rounded-full hover:bg-[var(--color-accent)]/90 transition-colors"
+                    >
+                      <HiCreditCard className="mr-2 w-5 h-5" />
+                      {donationType === 'monthly' ? 'Start Monthly Support' : 'Make Donation'}
+                      <HiArrowRight className="ml-2 w-5 h-5" />
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+             {/* Conference Venue Info */}
+       <section className="py-20 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-dark)]">
+         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+           <h2 className="text-3xl font-bold text-white mb-6">
+             Conference Venue
+           </h2>
+           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+             <h3 className="text-2xl font-bold text-white mb-4">Hotel Impero</h3>
+             <p className="text-white/90 mb-6">
+               Our annual conference takes place at the prestigious Hotel Impero in Oradea. 
+               Modern facilities, comfortable accommodation, and excellent conference rooms 
+               make it the perfect venue for our gathering.
+             </p>
+             <div className="flex items-center justify-center gap-2 text-[var(--color-accent)]">
+               <HiLocationMarker className="w-5 h-5" />
+               <span>Calea Aradului 9, Oradea 410223</span>
+             </div>
+           </div>
+         </div>
+       </section>
+
+       {/* Contact Form Section */}
+       <section 
+         ref={(el) => { sectionsRef.current['form'] = el; }}
+         className="py-20 bg-white"
+       >
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div className={`transition-all duration-1000 ${isVisible.form ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+             <div className="text-center mb-12">
+               <h2 className="text-4xl font-bold text-[var(--color-primary)] mb-4">
+                 Send Us a Message
+               </h2>
+               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                 Fill out the form below and we&apos;ll get back to you as soon as possible
+               </p>
+             </div>
+
+             <div className="max-w-4xl mx-auto">
+               <form onSubmit={handleSubmit} className="bg-gray-50 rounded-3xl shadow-xl p-8 md:p-12">
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   {/* Name Field */}
                   <div>
@@ -213,7 +398,7 @@ export default function ContactPage() {
                          onChange={handleChange}
                          required
                          placeholder="Enter your full name"
-                         className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[var(--color-accent)] placeholder-gray-400 text-gray-900"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[var(--color-accent)] placeholder-gray-400 text-gray-900 bg-white"
                        />
                     </div>
                   </div>
@@ -233,7 +418,7 @@ export default function ContactPage() {
                          onChange={handleChange}
                          required
                          placeholder="your@email.com"
-                         className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[var(--color-accent)] placeholder-gray-400 text-gray-900"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[var(--color-accent)] placeholder-gray-400 text-gray-900 bg-white"
                        />
                     </div>
                   </div>
@@ -248,7 +433,7 @@ export default function ContactPage() {
                     {subjects.map((subject) => (
                       <label
                         key={subject.value}
-                        className={`cursor-pointer rounded-lg border-2 p-4 text-center transition-all ${
+                         className={`cursor-pointer rounded-lg border-2 p-4 text-center transition-all bg-white ${
                           formData.subject === subject.value
                             ? 'border-[var(--color-accent)] bg-[var(--color-accent)]/5'
                             : 'border-gray-200 hover:border-gray-300'
@@ -288,7 +473,7 @@ export default function ContactPage() {
                      required
                      rows={6}
                      placeholder="Tell us how we can help..."
-                     className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[var(--color-accent)] resize-none placeholder-gray-400 text-gray-900"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[var(--color-accent)] resize-none placeholder-gray-400 text-gray-900 bg-white"
                    />
                 </div>
 
@@ -306,99 +491,6 @@ export default function ContactPage() {
                   </button>
                 </div>
               </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Find Us Section */}
-      <section 
-        ref={(el) => { sectionsRef.current['location'] = el; }}
-        className="py-20"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`transition-all duration-1000 ${isVisible.location ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-[var(--color-primary)] mb-4">
-                Find Us
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Visit our office or meet us at one of our events
-              </p>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
-              {/* Office Location */}
-              <div>
-                <div className="bg-gray-50 rounded-2xl p-8 mb-8">
-                  <h3 className="text-2xl font-bold text-[var(--color-primary)] mb-6">
-                    Main Office
-                  </h3>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <HiLocationMarker className="w-5 h-5 text-[var(--color-accent)] mt-1" />
-                      <div>
-                        <p className="font-semibold text-gray-700">Radical Football Romania</p>
-                        <p className="text-gray-600">Strada Sportului 15</p>
-                        <p className="text-gray-600">410042 Oradea, Bihor</p>
-                        <p className="text-gray-600">Romania</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-[var(--color-accent)] rounded-2xl p-8 text-white">
-                  <h4 className="text-xl font-bold mb-4">How to Get Here</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <span className="mt-1">🚗</span>
-                      <span>By Car: Free parking available on site</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="mt-1">🚌</span>
-                      <span>By Bus: Lines 12, 15, 20 (Stadium stop)</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="mt-1">🚊</span>
-                      <span>By Tram: Line 1 (Sportului station)</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="mt-1">✈️</span>
-                      <span>From Airport: 15 min by taxi</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Map Placeholder */}
-              <div className="bg-gray-200 rounded-2xl h-[500px] flex items-center justify-center">
-                <div className="text-center">
-                  <HiLocationMarker className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                  <p className="text-gray-500">Interactive map will be displayed here</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Conference Venue Info */}
-      <section className="py-20 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-dark)]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Conference Venue
-          </h2>
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Hotel Impero</h3>
-            <p className="text-white/90 mb-6">
-              Our annual conference takes place at the prestigious Hotel Impero in Oradea. 
-              Modern facilities, comfortable accommodation, and excellent conference rooms 
-              make it the perfect venue for our gathering.
-            </p>
-            <div className="flex items-center justify-center gap-2 text-[var(--color-accent)]">
-              <HiLocationMarker className="w-5 h-5" />
-              <span>Calea Aradului 9, Oradea 410223</span>
             </div>
           </div>
         </div>

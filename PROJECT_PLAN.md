@@ -1,247 +1,369 @@
-# ⚽ Radical Football Website - Project Plan
+# ⚽ Radical Football Platform - Project Plan
 
 ## 📋 Project Overview
-**Website:** Radical Football  
-**Type:** Community-driven Football Education Movement  
-**Tech Stack:** Next.js 14, TypeScript, Tailwind CSS, Local Fonts (Poppins + Sonny Gothic)
+**Platform:** Radical Football - Affective Pedagogical Community  
+**Type:** Educational Movement Platform with Emotional Intelligence  
+**Tech Stack:** Next.js 14, TypeScript, Tailwind CSS, MongoDB, Authentication System  
+**Core Philosophy:** Child-centered football education through vulnerability, reflection, and authentic human connection
 
 ---
 
-## 🏠 **HOMEPAGE** (`/`)
-### Hero Section
-- [ ] **Layered Background Design:** `sliding-tackle.png` (young player in action) overlaid on `logo-icon.png` (branded background)
-- [ ] **Animated Headline:** "Empowering Young Players Through Football" with staggered text animation
-- [ ] Geometric shapes that move on scroll (like the image example)
-- [ ] **Event Information Card:** Floating card with conference details (16-17 August, Hotel Impero, Oradea) - links to `/conferences/[slug]`
-- [ ] Simple, friendly introduction to our movement
-- [ ] **Call-to-Action Buttons:** "Buy Ticket" and "View More →" with hover animations
-- [ ] **Particle Effects:** Floating footballs or geometric elements in the background
-- [ ] **Design Notes:** 
-  - `sliding-tackle.png` shows intense action and determination
-  - `logo-icon.png` provides branded background with gradient colors
-  - Layered effect creates depth and visual interest
+## 🧭 **CORE PRINCIPLES**
 
-### Our Partners & Sponsors
-- [ ] Sponsor logos section (white logos on dark background)
-- [ ] Thank you message to partners
-- [ ] Partnership opportunities
-- [ ] **Logo Specifications:** 60-80px height, SVG format, white logos
-- [ ] **Design:** Dark blue background (#36586F) with white logos
-- [ ] **Layout:** Responsive grid (4-6 logos per row on desktop)
-- [ ] **Effects:** Hover animations with subtle glow and scale
+### Affective Navigation
+- **State-based UX**: Navigate by emotional states, not traditional menus
+- **Non-linear exploration**: Allow pauses, breaks, and circular movement
+- **Symbolic interaction**: Consistent visual language for key concepts
+- **Pedagogical imperfection**: Embrace raw, unpolished spaces as part of learning
 
-### What We're About
-- [ ] Simple explanation of Radical Football
-- [ ] Why we focus on children first
-- [ ] What makes us different
-
-### Our Founder
-- [ ] **Flavius Andrișca** - Founder profile with authentic photo
-- [ ] Personal story and motivation behind Radical Football
-- [ ] Authentic description of his vision and journey
-- [ ] Connection to the movement's philosophy
-
-### Our Values
-- [ ] **Relație (Relationship)** - Building meaningful connections
-- [ ] **Educație (Education)** - Learning and growth through football
-- [ ] **Joc (Play)** - The joy and importance of play
-- [ ] **Comunitate (Community)** - Building strong communities together
-- [ ] Visual representation of each value with icons or illustrations
-
-### Conference Preview
-- [ ] What to expect at our conference
-- [ ] Why you should come
-- [ ] What you'll learn and experience
-
-### Community Highlights
-- [ ] Real stories from people in our community
-- [ ] How we're making a difference together
-
-### Resources Spotlight
-- [ ] Latest article, podcast, video, or magazine issue
-- [ ] Link to resources section
+### Mandatory Design Elements
+These are **not errors** - they are intentional emotional and pedagogical spaces:
+- **Raw Journal** (🧱) - Unfinished reflections from real collaborations
+- **"I Don't Understand"** (🙊) - Confusion without shame, no answers
+- **"The Lantern Went Out"** (🌑) - Loss of meaning, burnout moments
+- **"Reflection Blocked"** (🔒) - When resources don't help, name that pause
+- **"Impossible Question"** (🛑) - Anonymous space for unspeakable concerns
+- **"Waiting Without Progress"** (⏳) - Stillness is allowed, time is not a mistake
+- **"What I Got Wrong"** (🔁) - Relearning through error, not guilt
 
 ---
 
-## 👤 **ABOUT PAGE** (`/about`)
-### Our Story
-- [ ] How Radical Football began
-- [ ] The people behind the movement
-- [ ] Our journey so far
+## 🏠 **1. START HERE** (`/start-here`)
+### Emotional Onboarding
+- [ ] **Affective State Selector**: "What's your relationship with football?"
+- [ ] **Guided Emotional Paths**:
+  - "I'm a coach and I feel I don't know how to continue"
+  - "I'm a parent and I'm looking for real support"
+  - "I want to change something, but I don't know where to start"
+- [ ] **Break Spaces**:
+  - "I haven't finished writing, but I'm sending anyway" button
+  - "I need a pause" open reflection space
+  - "Waiting Without Progress" (⏳) - non-linear user support
+- [ ] **UX Testing Markers**: Don Norman methodology integration
+- [ ] **Navigation to Core Sections**: Links to Manifest + Ethical Code
 
-### What We Believe
-- [ ] Our core values (child-centered, relationships before results, etc.)
-- [ ] What drives us
-- [ ] Our hopes and dreams
-
-### Our Code of Ethics
-- [ ] The principles we live by
-- [ ] Downloadable ethical code (PDF)
-
----
-
-## 🎓 **CONFERENCE PAGE** (`/conferences`)
-### Conference Overview
-- [ ] **General presentation** of the concept and format (theory + practice)
-- [ ] **What makes us different** from other conferences
-- [ ] **What it means to participate** (as guest, speaker, volunteer)
-- [ ] **Conference format** explanation
-
-### Current Conference
-- [ ] **Featured current conference** with banner and key details
-- [ ] **Conference preview** with highlights and speakers
-- [ ] **Call-to-action** to view full details
-- [ ] **Link to individual conference page** (`/conferences/[slug]`)
-- [ ] **Quick registration** or ticket purchase option
-
-### Past Conferences
-- [ ] **Conference archive** with year-based navigation
-- [ ] **Individual conference cards** for each past edition
-- [ ] **Photos and video highlights** from past events
-- [ ] **Complete programs** from previous years
-- [ ] **Speaker lists** from past conferences
-- [ ] **Partners and sponsors** from each edition
-- [ ] **Testimonials and memorable quotes** from participants
-
-### Individual Conference Pages (`/conferences/[slug]`)
-- [ ] **Conference banner** with year and theme
-- [ ] **Detailed description** of the specific edition
-- [ ] **Complete schedule** and program
-- [ ] **Ticket purchasing** and registration
-- [ ] **Speaker profiles** and presentations (4-7 speakers per conference)
-- [ ] **Conference sponsors** section
-- [ ] **Post-event gallery** (photos and videos)
-- [ ] **Testimonials** from that specific event
-
-### Speaker Section Details
-- [ ] **Speaker cards** with photos and brief bios
-- [ ] **Presentation titles** and descriptions
-- [ ] **Speaker expertise** and background
-- [ ] **Session times** and locations
-- [ ] **Speaker social media** links (optional)
-- [ ] **Speaker grid layout** (2-3 speakers per row on desktop)
-
-### Confirmed Speakers (2024 Conference)
-- [ ] **Peter Sturgess** - 20-word description needed
-- [ ] **Bastiaan Riemersma** - 20-word description needed
-- [ ] **Neil Harris** - 20-word description needed
-- [ ] **Mark O'Sullivan** - 20-word description needed
-- [ ] **Debbie Sayers** - 20-word description needed
-- [ ] **Rick Fenoglio** - 20-word description needed
-- [ ] **Jan Verbeek** - 20-word description needed
-- [ ] **Andrei Zaporojan** - 20-word description needed
-- [ ] **Martin VLK** - 20-word description needed
-- [ ] **Aslan Odev** - 20-word description needed
-- [ ] **Speaker Images:** 600x600 PNG format for each speaker
+### Design Requirements
+- **Warm, welcoming interface** that doesn't overwhelm
+- **State-based navigation** that remembers emotional paths
+- **Visible break spaces** with distinct symbols
+- **Non-judgmental language** throughout
 
 ---
 
-## 🌍 **COMMUNITY PAGE** (`/community`)
-### Committee Board
-- [ ] **Clear and elegant presentation** of board members
-- [ ] **Member profiles** with photo, name, affiliation, symbolic role
-- [ ] **Flavius Andrișca** - Founder and Board Member
-- [ ] **Symbolic roles** (e.g., "honorary co-founder", "thematic consultant", "speaker selection mentor")
-- [ ] **Board mission explanation**: "A group of people who support us in maintaining the pedagogical and human relevance of the conference, year after year."
-- [ ] **Future feature**: possibility for applications or nominations
+## 🟡 **2. ETHOS & PRINCIPLES** (`/ethos`)
+### Manifest (Lantern Symbol 🔥)
+- [ ] **Multimedia Presentation**: Text, audio, and video versions
+- [ ] **Interactive Elements**:
+  - "Take it with you" button
+  - Affective feedback curation
+  - "What did you feel?" response space
+- [ ] **Break Space**: "The Lantern Went Out" (🌑)
+  - Space for moments of lost meaning
+  - Optional text-only journal
+  - User submissions: "I forgot why I do this"
 
-### Official Romania Ambassador
-- [ ] **Ionuț Rada** - Official Romania Ambassador
-- [ ] **Professional photo** and profile
-- [ ] **Personal text** about what his role means
-- [ ] **His role in the conference**, community, and supporting Romanian coaches
+### Ethical Code & DEI (Compass Symbol 🧭)
+- [ ] **Exploratory Quiz**: Interactive ethical dilemmas
+- [ ] **Real Case Studies**: Practical moral challenges
+- [ ] **Break Space**: "I Got Lost" - examples of moral failure
+- [ ] **Visible Moderation Policy**: Transparent community guidelines
+- [ ] **Special Page**: "How does inclusion feel in training?"
+- [ ] **DEI Integration**: Active, measurable inclusion practices
 
-### Community Stories
-- [ ] Real stories from coaches, parents, volunteers
-- [ ] How we're making a difference together
-
-### Where We Are
-- [ ] Map showing our community
-- [ ] Cities and clubs we work with
-
-### Our Volunteers & Contributors
-- [ ] The amazing people who help us
-- [ ] Translators, collaborators, supporters
-
----
-
-## 📚 **RESOURCES & MAGAZINE PAGE** (`/resources`)
-### Our Library
-- [ ] Articles from database (with mock data from Google Drive during development)
-- [ ] Studies and research
-- [ ] Materials for practice
-- [ ] Podcasts and conversations
-- [ ] Videos and interviews (with mock data from YouTube during development)
-
-### Our Magazine
-- [ ] Latest issue
-- [ ] Stories, interviews, case studies
-- [ ] Community voices
-
-### Reading Lists
-- [ ] Books for beginners
-- [ ] Books for experienced practitioners
-
-### Development Notes
-- **Mock Data Source:** https://docs.google.com/document/d/1RBP3zXDOfcNpgm8_eQ-F8X4Jw_FFbcE9Ux5TYUWsEsI/edit?usp=drive_link
-- **Mock Video Source:** https://www.youtube.com/watch?v=vkLNYFqlCdQ
-- **Database Integration:** Articles and videos will be fetched from database in production
-- **Content Management:** Easy article and video addition and editing system
+### Design Requirements
+- **Symbolic consistency** with lantern and compass themes
+- **Vulnerable, honest tone** throughout
+- **Interactive elements** that encourage reflection
+- **Safe spaces** for difficult emotions
 
 ---
 
-## 🤝 **GET INVOLVED PAGE** (`/get-involved`)
-### Join Our Team
-- [ ] Become a speaker
-- [ ] Volunteer with us
-- [ ] Help with translations
+## 🟢 **3. RESOURCES & REFLECTION** (`/resources`)
+### Radical Library (Spiral Symbol 📚)
+- [ ] **Age-Filtered Resources**: U7-U11, U12-U16, U17+ categories
+- [ ] **Theme-Based Organization**: DEI, child-coach relationship, exercises
+- [ ] **Pedagogical Sheets**: Each resource includes:
+  - Detailed methodology
+  - 3 reflection questions
+  - Implementation guidance
+- [ ] **Break Spaces**:
+  - "What I Got Wrong" (🔁) - public acknowledgment of misinterpretation
+  - "Reflection Blocked" (🔒) - when resources don't help
+- [ ] **Access Control**: Requires user account
+- [ ] **Feedback System**: Affective responses to resources
 
-### Share Your Story
-- [ ] Tell us your experiences
-- [ ] Write articles or suggest topics
-- [ ] Help plan future events
+### Radical Football Magazine (Tension Symbol 🗞)
+- [ ] **Critical Articles**: Editorial content with active rebuttals
+- [ ] **Non-verbal Reactions**: Emoji-based affective responses
+  - 🌀 "Challenged me"
+  - 🌱 "Changed me" 
+  - 🔥 "Provoked me"
+- [ ] **Sections**:
+  - "Counterpoint" - opposing viewpoints
+  - "What I Got Wrong" - public learning moments
+  - "Internal Criticism" - anonymous, moderated content
+- [ ] **Active Replicas**: No likes, only meaningful responses
+- [ ] **Editorial Standards**: High-quality, reflective content
 
-### What Others Have Done
-- [ ] Examples of community contributions
-
----
-
-## 📅 **CALENDAR PAGE** (`/calendar`)
-### What's Coming Up
-- [ ] Workshops, training sessions, camps
-- [ ] Details for each event
-
-### Stay Updated
-- [ ] Sign up for our newsletter
-
----
-
-## 📞 **CONTACT PAGE** (`/contact`)
-### Get in Touch
-- [ ] Where to find us
-- [ ] Phone numbers
-- [ ] Email addresses
-- [ ] When we're available
-
-### Contact Form
-- [ ] General questions
-- [ ] Conference and ticket help
-- [ ] Media inquiries
-- [ ] Partnership opportunities
-
-### Find Us
-- [ ] Interactive map
-- [ ] How to get here
-- [ ] Public transport options
+### Design Requirements
+- **Clean, readable layout** for educational content
+- **Interactive elements** that encourage deep engagement
+- **Symbol integration** throughout the interface
+- **Progress tracking** for user learning journeys
 
 ---
 
-## 📝 **NOTES**
-- Keep language warm, friendly, and human
-- Focus on community and connection
-- Avoid corporate or marketing language
+## 🔴 **4. COMMUNITY & CONFERENCE** (`/community`)
+### Radical Football Conference
+- [ ] **Conference Information**:
+  - Program details and schedules
+  - Ticket purchasing with installment options
+  - Discount codes for different user types
+- [ ] **Archive System**:
+  - Past editions with photos and videos
+  - Speaker presentations and materials
+  - Participant reflections and testimonials
+- [ ] **Speaker Portal**:
+  - Login system for speakers
+  - Brief submission and upload capabilities
+  - Speaker profile management
+
+### Pedagogical Reflection Circle
+- [ ] **Quarterly Publications**: Regular editorial content
+- [ ] **Theme Mapping**: Visual organization of discussion topics
+- [ ] **Opponent Reactions**: Structured debate and response system
+- [ ] **Member Upload Space**: Internal content creation
+- [ ] **Visible Contributions**: Clear attribution and member profiles
+- [ ] **Form Submission**: "Propose a theme" functionality
+
+### Ambassador Program - Ionuț Rada
+- [ ] **Personal Column**: "What I Didn't Know As A Child" (monthly)
+- [ ] **Parent Q&A Forum**: Monthly interactive sessions
+- [ ] **Video Content**: Personal reflections and post-conference thoughts
+- [ ] **Podcast Integration**: Audio content and discussions
+- [ ] **Authentic Voice**: Real, vulnerable communication style
+
+### Design Requirements
+- **Community-focused interface** that encourages participation
+- **Clear role differentiation** between different user types
+- **Multimedia support** for various content types
+- **Engagement tracking** for community health
 
 ---
 
-## 📋 **TECHNICAL REFERENCE**
-For technical specifications, asset inventory, design system, and implementation details, see: **[TECHNICAL_SPECIFICATIONS.md](./TECHNICAL_SPECIFICATIONS.md)**
+## 🟣 **5. CLUB CONSULTANCY** (`/consultancy`)
+### Co-Learning Approach
+- [ ] **Philosophy Presentation**: Collaborative learning, not method delivery
+- [ ] **Service Packages**: Clear consultancy offerings and pricing
+- [ ] **Collaborative Spaces**:
+  - "What We Learned Together" shared reflections
+  - "Raw Journal" (🧱) - unedited collaboration notes
+- [ ] **Content Upload**:
+  - Training video submissions
+  - Reflective commentary system
+  - Progress tracking and documentation
+- [ ] **Break Space**: "Waiting Without Progress" (⏳)
+- [ ] **Non-Editorial Feed**: Raw, unfiltered collaboration content
+
+### Implementation Features
+- [ ] **Video Processing**: Upload and playback capabilities
+- [ ] **Commentary System**: Structured feedback and reflection
+- [ ] **Progress Documentation**: Ongoing collaboration tracking
+- [ ] **Client Portal**: Secure access for club representatives
+
+### Design Requirements
+- **Professional yet approachable** interface
+- **Clear value proposition** presentation
+- **Collaborative tools** that facilitate co-learning
+- **Transparent pricing** and service descriptions
+
+---
+
+## 🔵 **6. PARENTS & CHILD'S VOICE** (`/parents`)
+### Open Forum System
+- [ ] **Multimedia Support**: Text, audio, and video submissions
+- [ ] **Monthly Questions**: Curated discussion topics
+- [ ] **Protected Spaces**:
+  - "I Don't Understand" (🙊) - questions without answers
+  - "When Does a Loving Parent Make Mistakes?" - tension space
+- [ ] **Child's Rights Education**: Dedicated educational section
+- [ ] **Anonymous Concerns**: "Impossible Question" (🛑) button
+- [ ] **Moderation System**: Ethical, transparent content management
+
+### Community Features
+- [ ] **Parent Stories**: Real experiences and challenges
+- [ ] **Expert Q&A**: Monthly sessions with specialists
+- [ ] **Resource Sharing**: Parent-to-parent support materials
+- [ ] **Child Voice Integration**: Age-appropriate participation methods
+
+### Design Requirements
+- **Safe, supportive environment** for vulnerable discussions
+- **Clear moderation policies** and safety guidelines
+- **Age-appropriate content** filtering
+- **Accessible interface** for various technical skill levels
+
+---
+
+## 🟤 **7. MAP + ACCOUNT + SUPPORT** (`/map`)
+### Community Map
+- [ ] **Interactive Visualization**: Participant locations (city + country)
+- [ ] **Mini Audio Interviews**: 30-second community voices
+- [ ] **Connection Features**: "Activate Local Connections" functionality
+- [ ] **Affective Navigation**: Browse by emotional state, not just location
+- [ ] **Privacy Controls**: User-controlled visibility settings
+
+### User Account System
+- [ ] **Account Types**:
+  - Visitor (no account required)
+  - User (library access, forum participation)
+  - Speaker (conference portal access)
+  - Circle Member (editorial privileges)
+- [ ] **Personal Features**:
+  - Reading history and progress tracking
+  - Saved reflections and personal notes
+  - "My Collection" - curated personal library
+  - Special space access based on account type
+- [ ] **Profile Management**: Customizable user profiles
+
+### Support & Payment
+- [ ] **Conference Tickets**: Single purchase or installment options
+- [ ] **Donation System**: One-time contributions with ethical microcopy
+- [ ] **Monthly Support**: €5, €10, €20 tiers with exclusive content access
+- [ ] **Custom Codes**: "Teacher", "Partner-Club", "Involved Parent" discounts
+- [ ] **Ethical Messaging**: "You lit a lantern in Oradea" confirmation
+- [ ] **Transparent Financials**: Clear use of funds and impact reporting
+
+### Design Requirements
+- **Secure payment processing** with clear pricing
+- **Privacy-focused design** for user data protection
+- **Accessible donation options** for various financial situations
+- **Impact visualization** showing how contributions help
+
+---
+
+## 🛠 **TECHNICAL IMPLEMENTATION**
+
+### Phase 1: Foundation (Weeks 1-4)
+- [ ] **Navigation Restructure**: Update current site to 7-section layout
+- [ ] **User Authentication**: Basic login/registration system
+- [ ] **Core Pages**: Create all main section pages with placeholder content
+- [ ] **Symbol System**: Design and implement the 7 break space symbols
+
+### Phase 2: Core Features (Weeks 5-8)
+- [ ] **Affective Navigation**: State-based user experience system
+- [ ] **Break Spaces**: Implement all 7 mandatory emotional spaces
+- [ ] **Forum System**: Discussion and community features
+- [ ] **File Upload**: Audio, video, and document handling
+
+### Phase 3: Advanced Features (Weeks 9-12)
+- [ ] **Payment Integration**: Secure donation and ticket purchasing
+- [ ] **Interactive Map**: Community visualization and connection tools
+- [ ] **Content Management**: Advanced CMS for all content types
+- [ ] **Moderation Tools**: Ethical content management system
+
+### Technical Requirements
+- **Database**: MongoDB for flexible content structures
+- **Authentication**: Secure user management with role-based access
+- **File Storage**: Cloud storage for multimedia content
+- **Payment Processing**: Secure financial transactions
+- **Real-time Features**: Live community interactions
+- **Mobile Responsiveness**: Full functionality on all devices
+
+---
+
+## 📊 **SUCCESS METRICS**
+
+### Engagement Metrics
+- [ ] **Break Space Usage**: >30% of users engage with emotional spaces
+- [ ] **Session Duration**: Average >5 minutes per visit
+- [ ] **Community Participation**: Active forum and discussion engagement
+- [ ] **Content Consumption**: Resource library usage and completion rates
+
+### Business Metrics
+- [ ] **Conference Conversions**: Ticket sales and attendance
+- [ ] **Consultancy Inquiries**: Club partnership requests
+- [ ] **Support Contributions**: Donation and membership signups
+- [ ] **User Retention**: Return visitor rates and account creation
+
+### Quality Metrics
+- [ ] **Affective Feedback Quality**: Depth of emotional responses
+- [ ] **Content Relevance**: User satisfaction with resources
+- [ ] **Community Health**: Positive, supportive interactions
+- [ ] **Pedagogical Impact**: Measurable learning outcomes
+
+### Visual Identity Compliance
+- [ ] **Young Player Image Usage**: Track adherence to 3-4 appearance limit
+- [ ] **Guideline Violations**: Monitor and prevent non-compliant usage
+- [ ] **Brand Consistency**: Ensure proper variant usage across contexts
+
+---
+
+## 🎯 **CONTENT STRATEGY**
+
+### Founder-Curated Content
+- [ ] **Initial Break Space Content**: Authentic, vulnerable reflections
+- [ ] **Manifest Materials**: Personal story and vision
+- [ ] **Resource Library**: High-quality educational materials
+- [ ] **Community Guidelines**: Clear, ethical participation rules
+
+### Progressive Enhancement
+- [ ] **Community Contributions**: Gradual opening of user-generated content
+- [ ] **Expert Partnerships**: Collaboration with educational specialists
+- [ ] **Multimedia Expansion**: Video, audio, and interactive content
+- [ ] **International Growth**: Multi-language support and global reach
+
+### Monthly Reviews
+- [ ] **Affective Metrics Analysis**: Emotional engagement patterns
+- [ ] **Content Performance**: Resource usage and feedback
+- [ ] **Community Health Assessment**: Moderation and interaction quality
+- [ ] **Technical Performance**: Platform stability and user experience
+
+---
+
+## 📝 **DESIGN NOTES**
+
+### Visual Language
+- **Symbol Consistency**: All 7 break spaces use distinct, recognizable symbols
+- **Color Psychology**: Emotional color coding for different sections
+- **Typography**: Accessible, readable fonts that support long-form content
+- **Imagery**: Authentic, unpolished photos that reflect real experiences
+
+### Young Player Image Policy
+- **Usage Limit**: Maximum 3-4 appearances across entire site
+- **Context Restrictions**: Conference/founder contexts only for full image
+- **Variant System**: Full, silhouette, fragment, and badge variants
+- **No Performance Context**: Avoid sports/competition associations
+- **No Consecutive Pages**: Cannot appear on two pages in a row
+- **No Animations**: Never animated, rotated, or "cool" styled
+
+### User Experience
+- **Non-linear Navigation**: Users can move freely between emotional states
+- **Progress Resistance**: Spaces that don't force forward movement
+- **Vulnerability Support**: Interfaces that encourage honest expression
+- **Community Safety**: Clear boundaries and ethical guidelines
+
+### Accessibility
+- **Screen Reader Support**: Full compatibility with assistive technologies
+- **Keyboard Navigation**: Complete functionality without mouse
+- **Color Contrast**: High contrast ratios for readability
+- **Multilingual Support**: Romanian and English language options
+
+---
+
+## 🔄 **CONTINUOUS IMPROVEMENT**
+
+### Regular Assessments
+- **Monthly UX Reviews**: User feedback and interface improvements
+- **Quarterly Content Audits**: Resource quality and relevance
+- **Annual Platform Evolution**: Major feature updates and expansions
+- **Community Feedback Integration**: User-driven development priorities
+
+### Ethical Considerations
+- **Child Protection**: Strict safety protocols and content moderation
+- **Data Privacy**: Transparent data collection and user control
+- **Inclusive Design**: Accessibility for all users regardless of ability
+- **Cultural Sensitivity**: Respect for diverse backgrounds and experiences
+
+---
+
+*This platform represents a radical departure from traditional educational websites, prioritizing emotional intelligence, authentic human connection, and pedagogical vulnerability over polished marketing and corporate efficiency. Every element serves the core mission of empowering young players through meaningful football education.*

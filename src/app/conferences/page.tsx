@@ -95,74 +95,6 @@ export default function ConferencesPage() {
         description="Transformative gatherings for coaches, educators, and anyone passionate about child-centered football"
       />
 
-      {/* Conference Overview Section */}
-      <section 
-        ref={(el) => { sectionsRef.current['overview'] = el; }}
-        className="py-20"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`transition-all duration-1000 ${isVisible.overview ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-[var(--color-primary)] mb-4">
-                What Makes Us Different
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our conferences combine theory and practice in a unique format that challenges traditional thinking
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
-              {conferenceFeatures.map((feature, index) => (
-                <div
-                  key={index}
-                  className={`bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-700 ${
-                    isVisible.overview ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                  }`}
-                  style={{ transitionDelay: `${200 + index * 100}ms` }}
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[var(--color-accent)]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <feature.icon className="w-6 h-6 text-[var(--color-accent)]" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-[var(--color-primary)] mb-3">
-                        {feature.title}
-                      </h3>
-                      <p className="text-gray-600">
-                        {feature.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="bg-[var(--color-primary)] rounded-3xl p-8 md:p-12 text-white">
-              <div className="grid md:grid-cols-3 gap-8 text-center">
-                <div>
-                  <h3 className="text-2xl font-bold mb-4">For Coaches</h3>
-                  <p className="text-white/80">
-                    Transform your approach with practical tools and philosophies that put children first
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-4">For Educators</h3>
-                  <p className="text-white/80">
-                    Discover how football can be a powerful tool for child development and learning
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-4">For Communities</h3>
-                  <p className="text-white/80">
-                    Build environments where every child can thrive through the beautiful game
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Current Conference Section */}
       <section 
         ref={(el) => { sectionsRef.current['current'] = el; }}
@@ -283,10 +215,78 @@ export default function ConferencesPage() {
         </div>
       </section>
 
+      {/* Conference Overview Section */}
+      <section 
+        ref={(el) => { sectionsRef.current['overview'] = el; }}
+        className="py-20"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className={`transition-all duration-1000 ${isVisible.overview ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-[var(--color-primary)] mb-4">
+                What Makes Us Different
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our conferences combine theory and practice in a unique format that challenges traditional thinking
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
+              {conferenceFeatures.map((feature, index) => (
+                <div
+                  key={index}
+                  className={`bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-700 ${
+                    isVisible.overview ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  }`}
+                  style={{ transitionDelay: `${200 + index * 100}ms` }}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-[var(--color-accent)]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <feature.icon className="w-6 h-6 text-[var(--color-accent)]" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-[var(--color-primary)] mb-3">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-600">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-[var(--color-primary)] rounded-3xl p-8 md:p-12 text-white">
+              <div className="grid md:grid-cols-3 gap-8 text-center">
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">For Coaches</h3>
+                  <p className="text-white/80">
+                    Transform your approach with practical tools and philosophies that put children first
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">For Educators</h3>
+                  <p className="text-white/80">
+                    Discover how football can be a powerful tool for child development and learning
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">For Communities</h3>
+                  <p className="text-white/80">
+                    Build environments where every child can thrive through the beautiful game
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Past Conferences Section */}
       <section 
         ref={(el) => { sectionsRef.current['past'] = el; }}
-        className="py-20"
+        className="py-20 bg-gray-50"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`transition-all duration-1000 ${isVisible.past ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -303,7 +303,7 @@ export default function ConferencesPage() {
               {pastConferences.map((conference, index) => (
                 <div
                   key={conference.year}
-                  className={`bg-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-700 ${
+                  className={`bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-700 ${
                     isVisible.past ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                   }`}
                   style={{ transitionDelay: `${200 + index * 100}ms` }}

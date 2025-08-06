@@ -9,14 +9,14 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Conference', href: '/conferences' },
-    { name: 'Community', href: '/community' },
-    { name: 'Resources', href: '/resources' },
-    { name: 'Get Involved', href: '/get-involved' },
-    { name: 'Calendar', href: '/calendar' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Start Here', href: '/start-here', symbol: '🧭' },
+    { name: 'Ethos & Principles', href: '/ethos', symbol: '🟡' },
+    { name: 'Resources & Reflection', href: '/resources', symbol: '🟢' },
+    { name: 'Community', href: '/community', symbol: '🔴' },
+    { name: 'Conferences', href: '/conferences', symbol: '🎤' },
+    { name: 'Club Consultancy', href: '/consultancy', symbol: '🟣' },
+    { name: 'Parents & Child Voice', href: '/parents', symbol: '🔵' },
+    { name: 'Contact & Support', href: '/contact', symbol: '🟤' },
   ];
 
   return (
@@ -34,28 +34,8 @@ const Navigation = () => {
              />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                 key={item.name}
-                 href={item.href}
-                 className="text-gray-700 hover:text-[var(--color-accent)] transition-colors duration-200 font-medium"
-              >
-                 {item.name}
-              </Link>
-             ))}
-             <Link
-               href="/conferences"
-               className="bg-[var(--color-accent)] text-white px-4 py-2 rounded-lg hover:bg-[var(--color-primary)] transition-colors duration-200 flex items-center space-x-2"
-             >
-              <span>Buy Ticket</span>
-              <HiArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Hamburger menu button */}
+          <div>
             <button
                onClick={() => setIsMenuOpen(!isMenuOpen)}
                className="text-gray-700 hover:text-[var(--color-accent)] transition-colors duration-200"
@@ -69,18 +49,19 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Navigation Menu */}
         {isMenuOpen && (
-          <div className="md:hidden">
+          <div>
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
               {navItems.map((item) => (
                 <Link
                    key={item.name}
                    href={item.href}
-                   className="block px-3 py-2 text-gray-700 hover:text-[var(--color-accent)] transition-colors duration-200 font-medium"
+                   className="block px-3 py-2 text-gray-700 hover:text-[var(--color-accent)] transition-colors duration-200 font-medium flex items-center gap-2"
                    onClick={() => setIsMenuOpen(false)}
                 >
-                   {item.name}
+                   <span className="text-sm">{item.symbol}</span>
+                   <span>{item.name}</span>
                  </Link>
                ))}
                <Link
