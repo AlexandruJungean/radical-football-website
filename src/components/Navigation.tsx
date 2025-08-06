@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { HiMenu, HiX, HiArrowRight } from 'react-icons/hi';
+import { HiMenu, HiX } from 'react-icons/hi';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { HiArrowRight, HiCalendar, HiSparkles, HiUserGroup, HiClock, HiTicket } from 'react-icons/hi';
+import { HiArrowRight, HiCalendar, HiSparkles, HiClock } from 'react-icons/hi';
 import { HiMapPin } from 'react-icons/hi2';
 import Image from 'next/image';
 

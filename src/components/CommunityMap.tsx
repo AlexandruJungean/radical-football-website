@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { HiUserGroup, HiLocationMarker } from 'react-icons/hi';
 import { HiMapPin } from 'react-icons/hi2';
-import { COMMUNITY_LOCATIONS, MAP_CONFIG } from '@/lib/maps-config';
+import { COMMUNITY_LOCATIONS } from '@/lib/maps-config';
 
 interface CommunityMapProps {
   className?: string;
@@ -112,7 +112,7 @@ const CommunityMap = ({ className = '' }: CommunityMapProps) => {
       {/* Call to Action */}
       <div className="mt-6 p-4 bg-[var(--color-accent)]/10 rounded-lg text-center">
         <p className="text-sm text-gray-700 mb-2">
-          Don't see your community on the map?
+          Don&apos;t see your community on the map?
         </p>
         <button className="text-[var(--color-accent)] font-semibold hover:underline">
           Join the Radical Football movement

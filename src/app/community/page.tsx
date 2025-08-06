@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { HiHeart, HiUserGroup, HiStar, HiSparkles, HiArrowRight } from 'react-icons/hi';
+import { HiUserGroup, HiStar, HiArrowRight } from 'react-icons/hi';
 import Header from '@/components/Header';
 import { HiMapPin } from 'react-icons/hi2';
 import CommunityMap from '@/components/CommunityMap';

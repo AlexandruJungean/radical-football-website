@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { HiMail, HiPhone, HiGlobe, HiClock, HiLocationMarker, HiChat, HiUser, HiInformationCircle, HiTicket, HiUserGroup, HiArrowRight, HiHeart, HiCreditCard, HiGift } from 'react-icons/hi';
+import { HiMail, HiPhone, HiGlobe, HiLocationMarker, HiChat, HiUser, HiInformationCircle, HiTicket, HiUserGroup, HiArrowRight, HiHeart, HiCreditCard, HiGift } from 'react-icons/hi';
 import Header from '@/components/Header';
 
 export default function ContactPage() {
