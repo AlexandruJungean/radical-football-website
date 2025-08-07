@@ -101,14 +101,14 @@ const HeroSection = () => {
                    <div className="bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl border border-white/20 max-w-md mx-auto overflow-hidden">
                      {/* Conference Image - Full Width */}
                      <div className="w-full">
-                       <Image
-                         src="/images/conference/conference-banner-p-800.png"
-                         alt="Radical Football Conference 2024"
-                         width={400}
-                         height={200}
-                         className="w-full h-48 object-cover"
-                         priority
-                       />
+                        <Image
+                          src="/images/conference/conference-banner-p-800.png"
+                          alt="Radical Football Conference 2024 banner"
+                          width={400}
+                          height={200}
+                          className="w-full h-48 object-cover"
+                          priority
+                        />
                      </div>
 
                      {/* Card Content */}

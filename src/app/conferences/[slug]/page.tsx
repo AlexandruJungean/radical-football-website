@@ -173,7 +173,7 @@ export default function ConferenceDetailPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/conference/conference-banner.png"
-            alt="Conference Banner"
+            alt="Radical Football Conference banner with abstract overlay"
             fill
             className="object-cover opacity-20"
             sizes="100vw"
@@ -288,7 +288,7 @@ export default function ConferenceDetailPage() {
                   <div className="relative h-64">
                     <Image
                       src={speaker.image}
-                      alt={speaker.name}
+                      alt={`${speaker.name} – ${speaker.title} (${speaker.country})`}
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

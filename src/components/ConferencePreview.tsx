@@ -108,10 +108,11 @@ const ConferencePreview = () => {
                 <div className="relative h-64 rounded-2xl overflow-hidden mb-8">
                   <Image
                     src="/images/conference/conference-banner.png"
-                    alt="Radical Football Conference"
+                    alt="Radical Football Conference banner"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">

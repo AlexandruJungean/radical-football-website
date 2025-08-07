@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { HiHeart, HiChatAlt, HiUserGroup } from 'react-icons/hi';
 
 const CommunityHighlights = () => {
@@ -117,7 +118,7 @@ const CommunityHighlights = () => {
                   From small villages to major cities, the Radical Football movement is creating environments where children 
                   can play, learn, and grow without pressure.
                 </p>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-3 gap-4" role="list" aria-label="Impact highlights">
                   <div className="text-center">
                     <div className="text-3xl font-bold text-[var(--color-accent)] mb-2">500+</div>
                     <div className="text-sm text-white/80">Coaches Trained</div>
@@ -135,7 +136,7 @@ const CommunityHighlights = () => {
               <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden">
                 <Image
                   src="/images/young-players-running.png"
-                  alt="Young players enjoying football"
+                  alt="Young players running on a football field"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"

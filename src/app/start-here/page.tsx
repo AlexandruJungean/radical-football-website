@@ -5,6 +5,10 @@ import Link from 'next/link';
 import { HiArrowRight, HiHeart, HiAcademicCap, HiUsers } from 'react-icons/hi';
 import { BreakSpaceSymbol } from '@/components/SymbolSystem';
 import Header from '@/components/Header';
+export const metadata = {
+  title: 'Start Here – Radical Football',
+  description: 'Choose an emotional path and find resources tailored to your journey.',
+};
 
 const StartHerePage = () => {
   const [selectedPath, setSelectedPath] = useState<string | null>(null);

@@ -105,7 +105,7 @@ export default function AboutPage() {
               <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/conference/IMG_7129 copy 1.png"
-                  alt="Radical Football community gathering"
+                  alt="Radical Football community gathering of coaches and parents"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

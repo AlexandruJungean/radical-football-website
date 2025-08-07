@@ -116,10 +116,11 @@ export default function ConferencesPage() {
               <div className="relative h-96">
                 <Image
                   src="/images/conference/conference-banner.png"
-                  alt="2024 Radical Football Conference"
+                  alt="2024 Radical Football Conference banner with venue and date"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 80vw"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8 text-white">
@@ -310,13 +311,13 @@ export default function ConferencesPage() {
                 >
                   <div className="grid md:grid-cols-2 gap-0">
                     <div className={`relative h-64 md:h-auto ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
-                      <Image
-                        src={conference.image}
-                        alt={`${conference.year} Conference`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
-                      />
+                       <Image
+                         src={conference.image}
+                         alt={`${conference.year} Radical Football Conference highlights`}
+                         fill
+                         className="object-cover"
+                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
+                       />
                     </div>
                     <div className={`p-8 ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'}`}>
                       <div className="flex items-center gap-3 mb-4">

@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { HiHeart, HiAcademicCap, HiSparkles, HiUsers } from 'react-icons/hi';
 
 const ValuesSection = () => {
@@ -79,9 +80,11 @@ const ValuesSection = () => {
           <p className="text-lg text-gray-600 mb-6">
             Want to learn more about how we live these values every day?
           </p>
-          <button className="bg-[var(--color-accent)] text-white px-8 py-3 rounded-lg hover:bg-[var(--color-primary)] transition-colors duration-200 font-semibold">
-            Discover Our Story
-          </button>
+          <Link href="/about" aria-label="Discover Our Story">
+            <span className="inline-block bg-[var(--color-accent)] text-white px-8 py-3 rounded-lg hover:bg-[var(--color-primary)] transition-colors duration-200 font-semibold">
+              Discover Our Story
+            </span>
+          </Link>
         </div>
       </div>
     </section>

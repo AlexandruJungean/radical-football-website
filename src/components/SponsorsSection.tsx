@@ -81,8 +81,8 @@ const SponsorsSection = () => {
         {/* Sponsors Marquee */}
         <div className="relative overflow-hidden mb-6 py-4">
           {/* Desktop: Single row marquee */}
-          <div className="hidden lg:block">
-            <div className="flex animate-marquee">
+          <div className="hidden lg:block" aria-label="Sponsors marquee">
+            <div className="flex animate-marquee motion-reduce:animate-none">
               {/* First set of sponsors */}
               {sponsors.map((sponsor) => (
                 <a
@@ -91,6 +91,7 @@ const SponsorsSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center p-6 bg-white/5 rounded-xl hover:bg-white/10 transition-all duration-300 transform hover:scale-105 cursor-pointer group border border-white/10 mx-4 min-w-[200px]"
+                  aria-label={`Visit ${sponsor.name}`}
                 >
                   <Image
                     src={sponsor.logo}
@@ -109,6 +110,7 @@ const SponsorsSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center p-6 bg-white/5 rounded-xl hover:bg-white/10 transition-all duration-300 transform hover:scale-105 cursor-pointer group border border-white/10 mx-4 min-w-[200px]"
+                  aria-label={`Visit ${sponsor.name}`}
                 >
                   <Image
                     src={sponsor.logo}
@@ -123,9 +125,9 @@ const SponsorsSection = () => {
           </div>
 
           {/* Mobile: Two row marquee */}
-          <div className="lg:hidden space-y-4">
+          <div className="lg:hidden space-y-4" aria-label="Sponsors marquee mobile">
             {/* First row */}
-            <div className="flex animate-marquee">
+            <div className="flex animate-marquee motion-reduce:animate-none">
               {sponsors.slice(0, Math.ceil(sponsors.length / 2)).map((sponsor) => (
                 <a
                   key={`mobile-1-${sponsor.name}`}
@@ -133,6 +135,7 @@ const SponsorsSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all duration-300 transform hover:scale-105 cursor-pointer group border border-white/10 mx-2 min-w-[150px]"
+                  aria-label={`Visit ${sponsor.name}`}
                 >
                   <Image
                     src={sponsor.logo}
@@ -164,7 +167,7 @@ const SponsorsSection = () => {
             </div>
 
             {/* Second row */}
-            <div className="flex animate-marquee-reverse">
+            <div className="flex animate-marquee-reverse motion-reduce:animate-none">
               {sponsors.slice(Math.ceil(sponsors.length / 2)).map((sponsor) => (
                 <a
                   key={`mobile-2-${sponsor.name}`}
@@ -172,6 +175,7 @@ const SponsorsSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all duration-300 transform hover:scale-105 cursor-pointer group border border-white/10 mx-2 min-w-[150px]"
+                  aria-label={`Visit ${sponsor.name}`}
                 >
                   <Image
                     src={sponsor.logo}
@@ -209,10 +213,10 @@ const SponsorsSection = () => {
           <p className="text-gray-300 mb-6 text-lg">
             Interested in partnering with us? We&apos;d love to hear from you!
           </p>
-          <Link href="/contact">
-            <button className="bg-white text-[var(--color-dark-bg)] px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-semibold text-lg">
+          <Link href="/contact" aria-label="Become a Partner">
+            <span className="inline-block bg-white text-[var(--color-dark-bg)] px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-semibold text-lg">
               Become a Partner
-            </button>
+            </span>
           </Link>
         </div>
       </div>
@@ -240,6 +244,12 @@ const SponsorsSection = () => {
         }
         .animate-marquee-reverse {
           animation: marquee-reverse 30s linear infinite;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .animate-marquee,
+          .animate-marquee-reverse {
+            animation: none !important;
+          }
         }
       `}</style>
     </section>

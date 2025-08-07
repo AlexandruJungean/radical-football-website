@@ -81,7 +81,7 @@ export default function CommunityPage() {
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src="/images/comitee-board/flavius-andrisca-main.png"
-                    alt="Flavius Andrișca - Founder of Radical Football"
+                    alt="Portrait of Flavius Andrișca, founder of Radical Football"
                     width={600}
                     height={800}
                     className="w-full h-auto"
@@ -136,10 +136,10 @@ export default function CommunityPage() {
 
                 {/* Call to Action */}
                 <div className="pt-4">
-                  <button className="inline-flex items-center space-x-2 bg-[var(--color-accent)] text-white px-6 py-3 rounded-lg hover:bg-[var(--color-primary)] transition-colors duration-200 font-semibold">
+                  <a href="/about" className="inline-flex items-center space-x-2 bg-[var(--color-accent)] text-white px-6 py-3 rounded-lg hover:bg-[var(--color-primary)] transition-colors duration-200 font-semibold" aria-label="Learn More About Our Story">
                     <span>Learn More About Our Story</span>
                     <HiArrowRight className="w-4 h-4" />
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -209,7 +209,7 @@ export default function CommunityPage() {
                   <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                     <Image
                       src="/images/comitee-board/ionut-rada-main.png"
-                      alt="Ionuț Rada"
+                      alt="Portrait of Ionuț Rada, Radical Football Ambassador"
                       fill
                       className="object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"

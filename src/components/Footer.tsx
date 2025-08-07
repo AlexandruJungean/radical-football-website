@@ -110,7 +110,7 @@ const Footer = () => {
             <div className="space-y-3 mb-8">
               <div className="flex items-center gap-3 justify-center lg:justify-start">
                 <HiMail className="w-5 h-5 text-[var(--color-accent)]" />
-                <span className="text-gray-300">contact@radicalfootball.org</span>
+                <span className="text-gray-300">contact@radicalfootball.ro</span>
               </div>
               <div className="flex items-center gap-3 justify-center lg:justify-start">
                 <HiLocationMarker className="w-5 h-5 text-[var(--color-accent)]" />
@@ -175,9 +175,9 @@ const Footer = () => {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-full bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:border-transparent text-sm lg:text-base"
               />
-              <button className="px-6 py-3 bg-[var(--color-accent)] text-white font-semibold rounded-full hover:bg-[var(--color-accent)]/90 transition-colors duration-300 text-sm lg:text-base">
+              <a href="/resources" className="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-accent)] text-white font-semibold rounded-full hover:bg-[var(--color-accent)]/90 transition-colors duration-300 text-sm lg:text-base" aria-label="Subscribe">
                 Subscribe
-              </button>
+              </a>
             </div>
           </div>
         </div>

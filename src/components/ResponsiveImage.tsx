@@ -1,11 +1,12 @@
 'use client';
 
+import Image from 'next/image';
+
 interface ResponsiveImageProps {
   src: string;
   alt: string;
   className?: string;
   sizes?: string;
-  srcSet?: string;
   fill?: boolean;
   width?: number;
   height?: number;
@@ -18,7 +19,6 @@ const ResponsiveImage = ({
   alt,
   className = '',
   sizes,
-  srcSet,
   fill = false,
   width,
   height,
@@ -27,30 +27,30 @@ const ResponsiveImage = ({
 }: ResponsiveImageProps) => {
   if (fill) {
     return (
-      <img
+      <Image
         src={src}
         alt={alt}
+        fill
         className={className}
         sizes={sizes}
-        srcSet={srcSet}
+        priority={priority}
         style={{ objectFit: 'cover', ...style }}
       />
     );
   }
 
   return (
-    <img
+    <Image
       src={src}
       alt={alt}
       className={className}
-      width={width}
-      height={height}
+      width={width || 800}
+      height={height || 600}
       sizes={sizes}
-      srcSet={srcSet}
-      loading={priority ? 'eager' : 'lazy'}
+      priority={priority}
       style={style}
     />
   );
 };
 
-export default ResponsiveImage; 
+export default ResponsiveImage;

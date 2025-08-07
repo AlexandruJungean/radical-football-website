@@ -168,9 +168,9 @@ export default function GetInvolvedPage() {
                     </ul>
                   </div>
                   
-                  <button className="w-full bg-[var(--color-primary)] text-white px-6 py-3 rounded-full font-semibold hover:bg-[var(--color-primary-dark)] transition-colors">
+                  <a href="/contact" className="inline-flex items-center justify-center w-full bg-[var(--color-primary)] text-white px-6 py-3 rounded-full font-semibold hover:bg-[var(--color-primary-dark)] transition-colors" aria-label={opportunity.cta}>
                     {opportunity.cta}
-                  </button>
+                  </a>
                 </div>
               ))}
             </div>
@@ -238,12 +238,12 @@ export default function GetInvolvedPage() {
                 Your contribution could be exactly what someone needs to hear.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-3 bg-white text-[var(--color-primary)] font-semibold rounded-full hover:bg-gray-100 transition-colors">
+                <a href="/contact" className="inline-flex items-center justify-center px-8 py-3 bg-white text-[var(--color-primary)] font-semibold rounded-full hover:bg-gray-100 transition-colors" aria-label="Submit Your Story">
                   Submit Your Story
-                </button>
-                <button className="px-8 py-3 bg-[var(--color-accent)] text-white font-semibold rounded-full hover:bg-[var(--color-accent)]/90 transition-colors">
+                </a>
+                <a href="/contact" className="inline-flex items-center justify-center px-8 py-3 bg-[var(--color-accent)] text-white font-semibold rounded-full hover:bg-[var(--color-accent)]/90 transition-colors" aria-label="Propose an Article">
                   Propose an Article
-                </button>
+                </a>
               </div>
             </div>
           </div>

@@ -254,9 +254,9 @@ export default function CalendarPage() {
                       </div>
                     </div>
 
-                    <button className="w-full bg-[var(--color-accent)] text-white px-4 py-2 rounded-full font-semibold hover:bg-[var(--color-accent)]/90 transition-colors">
+                    <a href="#" className="inline-flex items-center justify-center w-full bg-[var(--color-accent)] text-white px-4 py-2 rounded-full font-semibold hover:bg-[var(--color-accent)]/90 transition-colors" aria-label={`Register for ${event.title}`}>
                       Register Now
-                    </button>
+                    </a>
                   </div>
                 </div>
               ))}
@@ -267,10 +267,10 @@ export default function CalendarPage() {
               <p className="text-gray-600 mb-6">
                 Can&apos;t find what you&apos;re looking for? We have more events coming soon!
               </p>
-              <button className="inline-flex items-center px-6 py-3 bg-[var(--color-primary)] text-white font-semibold rounded-full hover:bg-[var(--color-primary-dark)] transition-colors">
+              <a href="#" className="inline-flex items-center px-6 py-3 bg-[var(--color-primary)] text-white font-semibold rounded-full hover:bg-[var(--color-primary-dark)] transition-colors" aria-label="View Full Calendar">
                 View Full Calendar
                 <HiArrowRight className="ml-2 w-5 h-5" />
-              </button>
+              </a>
             </div>
           </div>
         </div>

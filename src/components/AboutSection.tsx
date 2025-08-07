@@ -84,7 +84,7 @@ const AboutSection = () => {
           </div>
 
           {/* Call to Action */}
-          <div className="text-center mt-12">
+            <div className="text-center mt-12">
             <p className="text-lg text-gray-600 mb-6">
               Join us in creating a football culture that truly serves our children
             </p>

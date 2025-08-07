@@ -19,7 +19,6 @@ const FounderSection = () => {
                 height={800}
                 className="w-full h-auto"
                 sizes="(max-width: 768px) 100vw, 50vw"
-                srcSet="/images/comitee-board/flavius-andrisca-main-p-500.png 500w, /images/comitee-board/flavius-andrisca-main-p-800.png 800w, /images/comitee-board/flavius-andrisca-main-p-1080.png 1080w, /images/comitee-board/flavius-andrisca-main.png 1920w"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>

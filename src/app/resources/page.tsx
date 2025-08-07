@@ -245,7 +245,7 @@ export default function ResourcesPage() {
                       <div className="relative h-40 rounded-lg overflow-hidden mb-4">
                         <Image
                           src={resource.thumbnail}
-                          alt={resource.title}
+                          alt={`${resource.title} – video thumbnail`}
                           fill
                           className="object-cover"
                           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -279,13 +279,15 @@ export default function ResourcesPage() {
                     </div>
 
                     {/* Action Button */}
-                    <button className="flex items-center text-[var(--color-accent)] font-semibold hover:underline">
-                      {resource.type === 'article' && 'Read Article'}
-                      {resource.type === 'video' && 'Watch Video'}
-                      {resource.type === 'podcast' && 'Listen Now'}
-                      {resource.type === 'guide' && (resource.downloadable ? 'Download Guide' : 'Read Guide')}
+                    <a href="#" className="inline-flex items-center text-[var(--color-accent)] font-semibold hover:underline" aria-label={`Open ${resource.type}`}>
+                      <span>
+                        {resource.type === 'article' && 'Read Article'}
+                        {resource.type === 'video' && 'Watch Video'}
+                        {resource.type === 'podcast' && 'Listen Now'}
+                        {resource.type === 'guide' && (resource.downloadable ? 'Download Guide' : 'Read Guide')}
+                      </span>
                       {resource.downloadable ? <HiDownload className="ml-2 w-4 h-4" /> : <HiArrowRight className="ml-2 w-4 h-4" />}
-                    </button>
+                    </a>
                   </div>
                 ))}
               </div>
@@ -343,14 +345,14 @@ export default function ResourcesPage() {
                       ))}
                     </ul>
                     <div className="flex gap-4">
-                      <button className="flex items-center px-6 py-3 bg-[var(--color-accent)] text-white font-semibold rounded-full hover:bg-[var(--color-accent)]/90 transition-colors">
+                      <a href="#" className="inline-flex items-center px-6 py-3 bg-[var(--color-accent)] text-white font-semibold rounded-full hover:bg-[var(--color-accent)]/90 transition-colors" aria-label="Read Online">
                         Read Online
                         <HiExternalLink className="ml-2 w-4 h-4" />
-                      </button>
-                      <button className="flex items-center px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-full hover:bg-gray-300 transition-colors">
+                      </a>
+                      <a href="#" className="inline-flex items-center px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-full hover:bg-gray-300 transition-colors" aria-label="Download PDF">
                         Download PDF
                         <HiDownload className="ml-2 w-4 h-4" />
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
